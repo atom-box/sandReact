@@ -1,43 +1,223 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+<html>
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+<head>
+    <title>React.js Sandbox</title>
+    <meta charset="UTF-8">
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+    <!-- INCREMENTAL REACT  -->
+    <script src="js/react.development.min.js"></script>
+    <script src="js/react-dom.development.min.js"></script>
+    <script src="js/browser.min.js"></script>
+    <script type="text/babel">
+        const Hello = () => {
+            return (
+                <h1>Hello, World!</h1>
+            );
+        }
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+        ReactDOM.render(<Hello/>, document.getElementById('root'));
+    </script>
+    <!-- END  _____  REACT  -->
+ 
+    <style type="text/css">
+
+        /*
+            Try adding React in an incremental way. 8/14/2019
+        */
+ :root {
+     --lightGray: rgb(239, 239, 244);
+     --darkGray: rgb(76, 77, 75);
+     --skyColor: rgb(124, 172, 255);
+     --palerSky: rgb(165, 220, 255 );
+     --infieldGreen: rgb(52, 147, 28);
+     --tigersNavy: rgb(7, 23, 53);
+}
+ button {
+     margin-left: 3rem;
+     height: 4rem;
+     width: 4rem;
+     background-color: white;
+     color: white;
+     border-radius: 2rem;
+     border-color: black;
+     border-width: 0.4rem;
+}
+ body{
+     margin:0;
+     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+     margin:0.5rem 1rem;
+     background: url(images/abe.png) no-repeat;
+     background-size: cover;
+     height: 1300px;
+}
+ img {
+     width: 98%;
+}
+ .title__hoegarden {
+     text-shadow: 1px 1px 2px black, 0 0 25px gray, 0 0 5px black;
+     font-family: monospace;
+     color: white;
+     font-weight: 500;
+}
+ .title__skinny {
+     font-weight: 100;
+     text-indent: 2.5rem;
+     line-height: 2.6rem;
+     background-color: rgba(230, 230, 230, 0.8);
+}
+ .title__explain {
+     padding: 0.4rem 2rem;
+}
+ .elShadow {
+     box-shadow: 0 7px 7px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+     border: 0.1rem hidden;
+     border-radius: 0.3rem;
+}
+ .dashboard {
+     border: 2px white;
+     margin: 0.5rem 2rem;
+     background-color: #444;
+     color: var(--lightGray) ;
+     padding: 0.5rem;
+}
+ .dashboard__text {
+     margin: 0.3rem 1.5rem;
+     color: white;
+}
+ .dashboard__data-noneditable {
+     color: black;
+     background-color: #777;
+}
+ .codeboard {
+     border: 5px dashed #bbb;
+     margin: 0.5rem 2rem;
+     background-color: #222;
+     padding: 0.5rem;
+}
+ .codeboard__code {
+     color: #aaf;
+     margin: 0.3rem 1.5rem 0.3rem 1.9rem;
+}
+ .block {
+     background-color: var(--lightGray) ;
+     margin: 1rem;
+     padding: 2rem;
+}
+ .navyBackground {
+     background-color: var(--tigersNavy);
+     xcolor: white;
+}
+ .greenBackground {
+     background-color: var(--infieldGreen);
+     border-radius: 0.6rem;
+     padding: 0.1rem 0.3rem;
+}
+
+    </style>
+
+
+</head>
+
+<body>
+
+    <header>
+        <h2 class="title__hoegarden float-left">
+    React Javascript
+  </h2>
+        <h3 class="title__skinny">
+    can be added incrementally to HTML
+  </h3>
+
+    </header>
+
+    <!-     uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu  -->
+
+    <div class="col-sm-10 col-md-6 col-lg-4   block elShadow"  id="filter1">
+
+
+<h2>Ballparks</h2>
+<ul>
+    <li>Ebbets</li>
+    <li>Briggs</li>
+    <li>Comiskey</li>
+
+</ul>
+
+
+        <div class="dashboard given elShadow">
+            <h4 class="dashboard__text">An input element:</h4>
+            <p class="dashboard__data-noneditable dashboard__text" id='demo4__before'>
+            </p>
+        </div>
+        <div class="codeboard elShadow">
+            <h4 class="dashboard__text">Like a button</h4>
+            <button onmouseover="change25624()" id="button__25624">25624</button>
+
+            </p>
+        </div>
+        <div class="dashboard output elShadow">
+            <h4 class="dashboard__text">This will be returned</h4>
+            <p class="dashboard__data-noneditable dashboard__text" id='demo4__after'>
+            </p>
+        </div>
+    </div>
+
+
+
+<div class="col-sm-10 col-md-6 col-lg-4   block elShadow"  id="filter1">
+
+
+<h2>React...</h2>
+
+
+
+        <div class="dashboard given elShadow" >
+            <h4 class="dashboard__text">...goes here:</h4>
+            <p class="dashboard__data-noneditable dashboard__text">
+            </p>
+        </div>
+        <div id="root">
+            
+        </div>
+</div>
+
+
+<div class="col-md-9  block elShadow">
+    <p>These buttons.  Are very round.</p>
+    <div class="container-fluid">
+        <!-- Navbar Menu -->
+        <ul>
+            <button><a href="index.html#map" title="MAP the array">L</a></button>
+            <button><a href="https://example.com" title="REDuce the array to a single value, which can be a primitive or object">M</a></button>
+            <button><a href="index.html#filter2" title="FILter the array">N</a></button>
+        </ul>
+    </div>
+</div>
+
+ 
+
+
+        <footer>
+            <div class="title__skinny">
+                <span>Evan Genest is on: </span>
+                <i class="fab fa-github"></i>
+                <a href="https://github.com/atom-box/">Github</a>
+                <i class="fab fa-twitter"></i>
+                <a href="https://twitter.com/mistergenest">Twitter</a>
+                <i class="fab fa-linkedin"></i><a href="https://www.linkedin.com/in/evan-genest-b6648380">LinkedIn </a>
+            </div>
+        </footer>
+
+    <script type="text/javascript">
+        console.log('yerp');
+        function change25624(){
+            console.log('burp');
+        }
+    </script>
+</body>
+<script type="module" src="xtip.js">
+</script>
+
 </html>
