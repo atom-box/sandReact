@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Random Sentence</title>
+<script   src="https://unpkg.com/react@15.6.2/dist/react.js"  ></script>
+<script  src="https://unpkg.com/react-dom@15.6.2/dist/react-dom.js"  ></script>
+<script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js" ></script>
+<script type="text/babel" >
+	console.log ('astonish');
+
+
+function Write() {
+	const letts = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"," "," "," "," "," "," "," "," "," "," "," "];
+	let totalLetts = 282; // like a tweet
+	let sentence = "";
+	while (totalLetts) {
+		sentence = sentence + letts[ Math.floor(36 * Math.random()) ];
+		totalLetts = totalLetts - 1;
+	}
+	return <p> {sentence} </p>;
+}
+
+
+
+ReactDOM.render( <Write />, document.getElementById("app"));
+
+// ReactDOM.render( <h1>Hely.</h1> , document.getElementById("app"));
+
+
+
+</script>
+</head>
+<body>
+	<h1>Hey Twitter, this is my tweet:</h1>
+	<div id="app"></div>
+
+</body>
+
+</html>
