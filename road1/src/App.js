@@ -7,14 +7,30 @@ function App() {
     return null;
   }
 
-  function ProgressBar() {
+
+
+
+
+
+// TEXT WORKS TEXT WORKS, look
+
+
+
+
+
+
+
+  function ProgressBar({text}) {
     return (
 
       <form onSubmit={null}>
-        <label>
-          Name:
-          <input type="text" value={null} onChange={null} />
-        </label>
+          <label htmlFor="editBox">Enter nine kinds of trees:</label>
+          <input type="text"  id="editBox" value={null} onChange={null} />
+                <textarea
+        value={text}
+ 
+        id="editor"
+      />
         <input type="submit" value="Submit" />
       </form>
 
