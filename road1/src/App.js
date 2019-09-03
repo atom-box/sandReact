@@ -23,9 +23,11 @@ function App() {
 
 
   return (
-    <div className="App">
-<ProgressBar />
-    </div>
+  <div className="App">
+    <Editor n1={"Sent this as a prop."}/>
+    <ProgressBar />
+    <Counter />
+  </div>
   );
 }
 
