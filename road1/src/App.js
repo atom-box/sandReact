@@ -2,19 +2,35 @@ import React from 'react';
 import './App.css';
 
 function App() {
-  var now = new Date();
-  now = now.toLocaleTimeString();
 
   function WordCounter(){
     return null;
   }
 
   function ProgressBar() {
-    return <h1>Blerchley</h1>;
+    return (
+
+      <form onSubmit={null}>
+        <label>
+          Name:
+          <input type="text" value={null} onChange={null} />
+        </label>
+        <input type="submit" value="Submit" />
+      </form>
+
+
+
+
+
+
+
+
+    )
   }
 
-  function Counter({ count }) {
-    return <p>Word Count: </p>
+  function Ticking({ count }) {
+      let now = new Date().toLocaleTimeString();
+    return <p>{now} </p>
   }
 
   function Editor(props) {
@@ -26,7 +42,7 @@ function App() {
   <div className="App">
     <Editor n1={"Sent this as a prop."}/>
     <ProgressBar />
-    <Counter />
+    <Ticking />
   </div>
   );
 }
