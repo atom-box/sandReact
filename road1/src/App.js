@@ -9,17 +9,17 @@ function App() {
     return null;
   }
 
-function ProgressBar() {
-  return <h1>Blerchley</h1>;
-}
+  function ProgressBar() {
+    return <h1>Blerchley</h1>;
+  }
 
-function Counter({ count }) {
-  return <p>Word Count: </p>
-}
+  function Counter({ count }) {
+    return <p>Word Count: </p>
+  }
 
-function Editor(props) {
-  return <p>Look: {props.n1}</p>;
-}
+  function Editor(props) {
+    return <p>Look: {props.n1}</p>;
+  }
 
 
   return (
