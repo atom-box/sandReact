@@ -10,19 +10,36 @@
 <script type="text/babel" >
 	console.log("Rappin at YOU, friend.");
 
-	function Foo() {
+	function Entering() {
 		return <button> {"noodle"} </button>
 	}
 
-	ReactDOM.render(<Foo /> , document.getElementById('nutmeg'));
+	function ShowingNumber() {
+		return <button> {"rice"} </button>
+	}
+	function ShowingBar() {
+		return <button> {"dumpling"} </button>
+	}
+
+function Countify() {
+	return null;
+}
+
+
+	ReactDOM.render(
+		<Countify>
+			<ShowingNumber />
+			<Entering />
+		</Countify>
+		, document.getElementById('nutmeg'));
 </script>
 
 
 </head>
 
 <body>
-	<h1>Red tractor</h1>
-	<div id="nutmeg">Nought, ought!</div>
+	<h1>Word Counter</h1>
+	<div id="nutmeg">Ought to be nought nougat!</div>
 
 </body>
 </html>
