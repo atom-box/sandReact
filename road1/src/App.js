@@ -2,7 +2,6 @@ import React from 'react';
 import './App.css';
 
 function App() {
-
   function WordCounter(){
     return null;
   }
@@ -24,7 +23,7 @@ function App() {
     return (
 
       <form onSubmit={null}>
-          <label htmlFor="editBox">Enter nine kinds of trees:</label>
+          <label htmlFor="editBox">Enter eight kinds of trees:</label>
           <input type="text"  id="editBox" value={null} onChange={null} />
                 <textarea
         value={text}
@@ -44,10 +43,6 @@ function App() {
     )
   }
 
-  function Ticking({ count }) {
-      let now = new Date().toLocaleTimeString();
-    return <p>{now} </p>
-  }
 
   function Editor(props) {
     return <p>Look: {props.n1}</p>;
@@ -58,9 +53,12 @@ function App() {
   <div className="App">
     <Editor n1={"Sent this as a prop."}/>
     <ProgressBar />
-    <Ticking />
   </div>
   );
 }
+
+
+
+
 
 export default App;

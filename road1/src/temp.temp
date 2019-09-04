@@ -1,0 +1,18 @@
+
+
+
+
+
+
+
+
+// Mad!  This won't work if it is in another file
+ function Ticking() {
+      let now = new Date().toLocaleTimeString();
+    let nowElement = (
+    	<p>Time: {now} </p>
+    );
+		ReactDOM.render(nowElement, document.getElementById('clockHere'));
+  }
+setInterval(Ticking(), 100);
+ReactDOM.render(<App />, document.getElementById('root'));
