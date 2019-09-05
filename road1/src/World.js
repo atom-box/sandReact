@@ -5,7 +5,7 @@ import './App.css';
 
 
 function World(props){
-	let t = props.epoch;
+	let t = props.time;
 	t /= 10000;
 	let baleans = t, zees = t;
 	return (
@@ -34,7 +34,7 @@ function World(props){
 
 function Booming(){
 	let epoch = new Date().getTime();
-	ReactDOM.render(<World />, document.getElementById('popular'))
+	ReactDOM.render(<World time={epoch}/>, document.getElementById('popular'))
 }
 
 
