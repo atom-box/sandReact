@@ -18,7 +18,7 @@ import * as serviceWorker from './serviceWorker';
 		ReactDOM.render(nowElement, document.getElementById('clockHere'));
   }
 setInterval(Ticking, 3000);
-setInterval(Booming, 3000);
+setInterval(Booming, 300);
 
 
 

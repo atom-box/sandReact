@@ -6,7 +6,8 @@ import './App.css';
 
 function World(props){
 	let t = props.time;
-	t /= 10000;
+	t -= 1567700000000;
+	t = (t -(t%100))/100  ;
 	let baleans = t, zees = t;
 	return (
 		<div class="App-header">
