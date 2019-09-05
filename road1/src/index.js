@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App'; // ****
+import World from './World';
 import * as serviceWorker from './serviceWorker';
 
 
@@ -16,11 +17,13 @@ import * as serviceWorker from './serviceWorker';
     );
 		ReactDOM.render(nowElement, document.getElementById('clockHere'));
   }
-setInterval(Ticking, 100);
+setInterval(Ticking, 3000);
 
 
 
 ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<World />, document.getElementById('popular'));
+
 
 
 
