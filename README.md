@@ -1,5 +1,5 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
+* Some directories, named 'Road', are bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+* Some directories contain projects that load React/Babel in the browser using a CDN.
 ## Available Scripts
 
 In the project directory, you can run:
