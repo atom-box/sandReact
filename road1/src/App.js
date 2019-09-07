@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 
 function App() {
-const tally = 3, text = "Ham over pine.", completion = 3 / 8;
+const tally = 3, text = "Ham over pine.", completion = 66;
 
                     function WordCounter({tally}){
                         return <h2>Number of words: {tally}</h2>;
@@ -27,9 +27,9 @@ const tally = 3, text = "Ham over pine.", completion = 3 / 8;
                       const percent = completion * 100;
                       return (
                         <div>
-                        <label>Progress
+                        <label>Progresso
                         </label>
-                        <progress value={completion}>
+                        <progress value={completion} class="stay-big" >
                         {percent}%
                         </progress>
                         </div>

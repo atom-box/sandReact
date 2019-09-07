@@ -10,15 +10,12 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  min-height: 3rem; 
   font-size: calc(10px + 2vmin);
   color: white;
   border: solid blue 0.3rem;
   border-radius: 0.3rem;
+  margin: 0.5rem 0.5rem 0.5rem 3rem;
 }
 
 .App-link {
@@ -32,4 +29,13 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/*=======E==V==A==N================*/
+
+.stay-big {
+  min-width: 4rem;
+  min-height: 1.1rem;
+  color: red;
+  background-color: black;
 }
