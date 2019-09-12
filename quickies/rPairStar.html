@@ -70,6 +70,7 @@ function pairStar(s1) {
 
     ReactDOM.render(testDivs, document.getElementById('mountNode'));
 </script>
+<script type="text/javascript" src="./helpers/form__prefixes.js"></script>
 
 
                 <style type="text/css">
@@ -100,7 +101,6 @@ function pairStar(s1) {
                     color: white;
                 }
                 li p:hover {
-                    xfont-style: italic;
                     transform: scale(1.35);
                 }
                 
@@ -178,7 +178,6 @@ function pairStar(s1) {
                     }
                     .title__skinny {
                          font-weight: 100;
-                         text-indent: 2.5rem;
                          line-height: 2.6rem;
                     }
                 
@@ -217,14 +216,14 @@ function pairStar(s1) {
 
         <div class="flex-row jumbo elShadow " id="exposed1">
             <div class="col-6 elShadow  bpm">
-                <h1 class="title__skinny">alpha<span class="title__hoegarden "> sorted</span> text.</h1>
-                <p>Sort the input by alphabet and show the first and last words.</p>
+                <h1 class="title__skinny">star the <span class="title__hoegarden ">doubled</span> consonants</h1>
+                <p>Enter some text.  If a word has doubled consonants, they will be separated with a star.</p>
             </div>
             <!-- left column end -->
 
 
 
-<div id="mountNode"></div>
+<div class="col-6 elShadow  bpm" id="mountNode"></div>
             <!-- right column end -->
 
 
