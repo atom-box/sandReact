@@ -1,6 +1,6 @@
 ## What's going on here
 I'm making small React web apps.<br>Each directory above is a self-contained homework project
-## Two projects above that will run in any browser
+## Three projects above that will run in any browser
 * quickies/rPairStar.html RUN
 * quickies/rWorldPopulation.html RUN
 * quickies/rLoremIpsumGenerator.html<br><br>
