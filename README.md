@@ -1,68 +1,24 @@
-* Some directories, named 'Road', are bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-* Some directories contain projects that load React/Babel in the browser using a CDN.
-## Available Scripts
+## What's going on here
+I'm making small React web apps.<br>Each directory above is a self-contained homework project
+## Three projects that will only run in NODE
+These were made by modifying [Create React App](https://github.com/facebook/create-react-app)<br>
+They won't run unless you go through all the work of setting up their whole PACKAGE / NPM / DEPENDENCIES environment thing.<br>
+Once that is done, npm start allows [http://localhost:3000](http://localhost:3000) to view them in the browser.<br>
+* road 0
+* road 1
+* pluralsight
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Two projects that will run in any browser
+These need no special environment; they run completely in browser.<br>
+They are self-contained.<br>
+Each one is a HTML file;<br>
+their React is enabled by CDN, as is Babel via CDN too.  <br>
+* quickies/rPairStar.html RUN
+* quickies/rWorldPopulation.html RUN
+## Acknowledgements:
+For setting up react and learning the syntax I used:
+* "The Road to React" by Robin Wieruch
+* "Pragmatic Programmers: React for Real" by Ludovico Fischer , ed. Brian Hogan
+* Pluralsight: Samer Buna's course "Getting Started".
+For content ideas I used:
+* Coding Bat 
