@@ -1,0 +1,156 @@
+<!--  
+/*****************************************/ 
+// This is a frame for running snippets of JSX. // Try to name those snippets with an r(eact) at the front! 
+/*****************************************/
+
+// Given a string, compute recursively a new string where identical chars that are adjacent in the original string are separated from each other by a "*".
+
+// pairStar("hello") → "hel*lo"
+// pairStar("xxyy") → "x*xy*y"
+// pairStar("aaaa") → "a*a*a*a"
+
+
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>compute recursive STARS between redundant chars</title>
+<meta charset="UTF-8"><meta>
+<script src="https://unpkg.com/react@15.6.2/dist/react.js"></script>
+<script src="https://unpkg.com/react-dom@15.6.2/dist/react-dom.js"></script>
+<script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+<link src="https://unpkg.com/tachyons@4.8.0/css/tachyons.min.css
+" rel="stylesheet" ></link>
+<script type="text/babel">
+// make array of objects to display
+let cards = [];
+let card = {before: "", id: 0};
+cards = [
+    {
+        before: "xxyy",
+        id: 0
+    },
+    {
+        before: "hello",
+        id: 1
+    },
+    {
+        before: "aaaa",
+        id: 2
+    }
+]
+
+function pairStar(s1) {
+    let s2 = '';
+    let a1 = s1.split('');
+    let c1 ='', c2 ='';
+    while (a1.length > 0){
+        s2 += a1.shift();
+        // Final char on growing string
+        c1 = s2[s2.length -1];
+        // Next char on shrinking string
+        c2 = a1[0];
+        if (c1 === c2){
+            s2 += '*';
+        }
+    }
+    return s2;
+}
+
+    const testDivs = (
+    <div className="mv2 flex flex-column">
+
+    <div className="mv2 " >
+        <h2>Before:</h2>
+        <h2>{cards[0].before}</h2>
+        <h2>After:</h2>
+        <h2>{pairStar(cards[0].before)}</h2>
+    </div>
+
+    </div>
+    );
+    ReactDOM.render(testDivs, document.getElementById('mountNode'));
+</script>
+
+<style type="text/css">
+     :root {
+        /* from https://creativexcorner.wordpress.com/2018/03/07/jean-michel-basquiat-one-of-the-last-natural-born-artists/ */
+     --vivid3: rgb(227, 191, 39);  
+     --vivid1: rgb(29, 60, 171); 
+     --vivid2: rgb(213, 90, 34 );
+     --dark1: rgb(7, 23, 53);
+     --light1: rgb(197, 190, 170); 
+     --light2: rgb(222, 223, 223); 
+}
+    body {
+          margin: 0;
+          background-color: var(--light2);
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+            "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+            sans-serif;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+    }
+
+    .holding{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .title {
+         background-color: var(--vivid1);
+         color: white ;
+.grow:hover,
+.grow:focus {
+  transform: scale(1.05);
+}
+
+    }
+     .title__hoegarden {
+        color:  var(--vivid1);
+         text-shadow: 1px 1px 2px white, 0 0 25px gray, 0 0 5px white;
+         font-weight: 500;
+         font-variant: small-caps;
+    }
+     .title__skinny {
+         font-weight: 100;
+         text-indent: 2.5rem;
+         line-height: 2.6rem;
+    }
+    .bpm {
+        margin: 0.5rem 2rem;
+        padding: 0.5rem; 
+        text-align: center;
+        max-width: 40%;
+        border: 0.1rem hidden;
+        border-radius: 0.3rem;
+    }
+
+      .elShadow {
+         box-shadow: 0 7px 7px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    }
+     .dashboard {        
+         background-color: var(--vivid2);
+         color: white;
+
+    }
+    .output {
+        border: dashed var(--vivid3) 0.2rem;
+    }
+
+</style>
+
+</head>
+
+<body >
+    <div class="holding">
+    <h1 class="title title__skinny elShadow bpm grow">find <span class="title__hoegarden"> adjacent</span> letters </h1>
+    <div class="dashboard output elShadow bpm"   id="mountNode"></div>
+    </div>
+</body>
+
+</html>
