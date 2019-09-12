@@ -22,55 +22,7 @@
 <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
 <link src="https://unpkg.com/tachyons@4.8.0/css/tachyons.min.css
 " rel="stylesheet" ></link>
-<script type="text/babel">
-// make array of objects to display
-let cards = [];
-let card = {before: "", id: 0};
-cards = [
-    {
-        before: "xxyy",
-        id: 0
-    },
-    {
-        before: "hello",
-        id: 1
-    },
-    {
-        before: "aaaa",
-        id: 2
-    }
-]
 
-function pairStar(s1) {
-    let s2 = '';
-    let a1 = s1.split('');
-    let c1 ='', c2 ='';
-    while (a1.length > 0){
-        s2 += a1.shift();
-        // Final char on growing string
-        c1 = s2[s2.length -1];
-        // Next char on shrinking string
-        c2 = a1[0];
-        if (c1 === c2){
-            s2 += '*';
-        }
-    }
-    return s2;
-}
-
-    const testDivs = (
-    <div  >
-        <h2>Before:</h2>
-        <h2>{cards[0].before}</h2>
-        <h2>After:</h2>
-        <h2>{pairStar(cards[0].before)}</h2>
-    </div>
-    );
-
-
-    ReactDOM.render(testDivs, document.getElementById('mountNode'));
-</script>
-<script type="text/javascript" src="./helpers/form__prefixes.js"></script>
 
 
                 <style type="text/css">
@@ -207,6 +159,72 @@ function pairStar(s1) {
                         border: dashed var(--vivid3) 0.2rem;
                     }
                 </style>
+
+
+<script type="text/babel">
+// make array of objects to display
+let cards = [];
+let card = {before: "", id: 0};
+cards = [
+    {
+        before: "xxyy",
+        id: 0
+    },
+    {
+        before: "hello",
+        id: 1
+    },
+    {
+        before: "aaaa",
+        id: 2
+    }
+]
+
+function pairStar(s1) {
+    let s2 = '';
+    let a1 = s1.split('');
+    let c1 ='', c2 ='';
+    while (a1.length > 0){
+        s2 += a1.shift();
+        // Final char on growing string
+        c1 = s2[s2.length -1];
+        // Next char on shrinking string
+        c2 = a1[0];
+        if (c1 === c2){
+            s2 += '*';
+        }
+    }
+    return s2;
+}
+
+function Adder(props){
+    console.log("You deserve a change " + props.n1 + ' ' + props.n2);
+    return <h3>{props.n1}</h3>
+
+}
+
+
+
+    const testDivs = (
+    <div  >
+
+
+<Adder n1={13} n2={14} />
+
+
+
+        <h2>{cards[0].before}</h2>
+        <h2>After:</h2>
+        <h2>{pairStar(cards[0].before)}</h2>
+    </div>
+    );
+
+
+    ReactDOM.render(testDivs, document.getElementById('mountNode'));
+</script>
+<script type="text/javascript" src="./helpers/form__prefixes.js"></script>
+
+
 
 </head>
 
