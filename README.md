@@ -18,8 +18,8 @@ Once that is done, npm start allows [http://localhost:3000](http://localhost:300
 
 ## For setting up react and learning the syntax I used:
 
-* "The Road to React" by Robin Wieruch
-* "Pragmatic Programmers: React for Real" by Ludovico Fischer , ed. Brian Hogan
-* Pluralsight: Samer Buna's course "Getting Started".
+* Book: "The Road to React" by Robin Wieruch
+* Book: "Pragmatic Programmers: React for Real" by Ludovico Fischer , ed. Brian Hogan
+* Course: Pluralsight's Samer Buna's course "Getting Started".
 ## For content ideas I used:
 * Coding Bat 
