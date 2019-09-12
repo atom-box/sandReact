@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>Words to Count | The Road by Robin Wieruch</title>
+<style type="text/css">
+                    :root {
+                        /* from https://creativexcorner.wordpress.com/2018/03/07/jean-michel-basquiat-one-of-the-last-natural-born-artists/ */
+                     --vivid3: rgb(227, 191, 39);  
+                     --vivid1: rgb(29, 60, 171); 
+                     --vivid2: rgb(213, 90, 34 );
+                     --dark1: rgb(7, 23, 53);
+                     --light1: rgb(197, 190, 170); 
+                     --light2: rgb(222, 223, 223); 
+                }
+                    body {
+                          margin: 0;
+                          background-color: var(--light2);
+                          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+                            "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+                            sans-serif;
+                          -webkit-font-smoothing: antialiased;
+                          -moz-osx-font-smoothing: grayscale;
+                    }
+ 
+                
+                .monde {
+                  /*==f=i=l=l==s=c=r=e=e=n==================*/
+                background-color: #444;
+                  min-height: 100%;
+                  xmin-width: 1024px; 
+                  /* Set up proportionate scaling */
+                  width: 100%;
+                  height: auto;
+                  /* Set up positioning */
+                  position: fixed;
+                  /*===c=e=n=t=e=r=i=n=g=================*/
+                    display: flex;          /*(1)VERT*/
+                    flex-direction: row;    /*(1)VERT*/
+                    align-items: center;    /*(1)VERT*/
+                    justify-content: center;  /*(2)HORIZ*/
+                }
+                
+                .flex-column {
+                    display: flex;         
+                    flex-direction: column;    /*(1)VERT*/
+                    align-items: center;    /*(1)VERT*/
+                    justify-content: space-around;  /*(2)HORIZ*/
+                }
+                
+                .flex-row {
+                    display: flex;
+                    flex-direction:row;
+                }
+
+                /*===d=i=v=s===&====b=o=u=n=d=s=======*/
+                
+                .bpm {
+                    margin: 0.5rem 2rem;
+                    padding: 0.5rem; 
+                    text-align: center;
+                    max-width: 80%;
+                }
+                
+                .jumbo {
+                     background-color: var(--vivid1);
+                     color: white ;
+                     border: solid #eee 0.2rem;
+                }
+                #tall {
+                     height: 23rem;
+                     border: solid yellow 0.2rem;
+                     background-color: #c00;
+                }
+            
+                  .elShadow {
+                    box-shadow: 0 7px 7px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                    xborder: 0.1rem hidden;
+                    border-radius: 0.3rem;
+                }
+            
+                .output {
+                    background-color: #eee;
+                    color: #444;
+                    border: solid #333 0.2rem;
+                }
+                .test-div {
+                  border: dotted white 0.3rem;
+                }                
+
+                /*====r=e=s=p=o=n=s=i=b=i=l=i=t=y===========*/
+                /* For desktop: */
+                .col-1 {width: 8.33%;}
+                .col-2 {width: 16.66%;}
+                .col-3 {width: 25%;}
+                .col-4 {width: 33.33%;}
+                .col-5 {width: 41.66%;}
+                .col-6 {width: 50%;}
+                .col-7 {width: 58.33%;}
+                .col-8 {width: 66.66%;}
+                .col-9 {width: 75%;}
+                .col-10 {width: 83.33%;}
+                .col-11 {width: 91.66%;}
+                .col-12 {width: 100%;}
+                
+                @media only screen and (max-width: 768px) {
+                  /* For mobile phones: */
+                  [class*="col-"] {
+                    width: 100%;
+                  }
+                  .flex-row {
+                    display: relative;
+                    float: left;
+                  }
+                }
+                
+                /*=====f=o=n=t===&====t=e=x=t===============*/
+                
+                
+                    .hover-grow:hover, .grow:focus {
+                      transform: scale(1.35);
+                    }
+                
+                    .title__hoegarden {
+                        color:  var(--vivid1);
+                        text-shadow: 1px 1px 2px white, 0 0 25px gray, 0 0 5px white;
+                        font-weight: 500;
+                        font-variant: small-caps;
+                    }
+                    .title__skinny {
+                         font-weight: 100;
+                         text-indent: 2.5rem;
+                         line-height: 2.6rem;
+                    }
+                
+</style>
+ 
+
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+
+
+
+    <div class="monde">
+
+
+        <div class="flex-row jumbo elShadow " id="tall">
+            <div class="col-6 elShadow  bpm flex-column">
+            <div class="flex-column test-div">
+                <h1 class="title__skinny">alpha<span class="title__hoegarden "> sorted</span> text.</h1>
+            </div>
+            <div class="flex-column test-div">
+                <p>Sort the input by alphabet and show the first and last words.</p>
+            </div>
+            </div>
+            <form class="col-6 flex-column" autocomplete="on" oninput="bottomOrange.value = munch(topOrange.value)">
+                <div class="elShadow bpm jumbo ">Type words into the first box.</div>
+                <input class=" output elShadow bpm  hover-grow" id="mountNode" type="textarea" placeholder="type here"></input>
+                <!-- out1 end -->
+            </form>
+          </div>
+      </div>
+
+
+
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  <script src="../../pluralsight/button-pluralsight.js"></script>
+  </body>
+</html>
