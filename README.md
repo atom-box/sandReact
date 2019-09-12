@@ -2,7 +2,8 @@
 I'm making small React web apps.<br>Each directory above is a self-contained homework project
 ## Two projects above that will run in any browser
 * quickies/rPairStar.html RUN
-* quickies/rWorldPopulation.html RUN<br><br>
+* quickies/rWorldPopulation.html RUN
+* quickies/rLoremIpsumGenerator.html<br><br>
 These need no special environment; they run completely in browser.<br>
 They are self-contained.<br>
 Each one is a HTML file;<br>
