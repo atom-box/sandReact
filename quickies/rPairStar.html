@@ -181,15 +181,20 @@ function pairStar(s1) {
     return s2;
 }
 
-function Adder(props){
+function Show(props){
     return <h3>{pairStar(props.testString)}</h3>
-
+}
+function Editor({text,}) {
+    return (
+        <textarea  defaultValue={text}  />
+    )
 }
 
 
 const testDivs = (
     <div>
-        <Adder testString={"collar woo"}  />
+        <Editor text={"type here"}   />
+        <Show testString={"collar woo"}  />
 
 
     </div>
