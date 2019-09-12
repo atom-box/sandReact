@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Random Sentence</title>
+<script   src="https://unpkg.com/react@15.6.2/dist/react.js"  ></script>
+<script  src="https://unpkg.com/react-dom@15.6.2/dist/react-dom.js"  ></script>
+<script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js" ></script>
+<style type="text/css">
+	
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+   }
+
+.hold {
+display: flex;
+flex-direction:  column;
+align-items: center;
+}
+
+.skinny {
+	width: 40rem;
+}
+
+
+</style>
+<script type="text/babel" >
+	console.log ('astonish');
+
+// This is very off-the-cuff.  I just wanted to see how fast I could write something like this.
+
+function Write() {
+	const letts = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","r","s","t","u","v","w","y","z"," "," "," "," "," "," "," "," "," "," "," "];
+	let totalLetts = 282; // like a tweet
+	let sentence = "";
+	while (totalLetts) {
+		sentence = sentence + letts[ Math.floor(36 * Math.random()) ];
+		totalLetts = totalLetts - 1;
+	}
+	return <p> {sentence} </p>;
+}
+
+
+
+ReactDOM.render( <Write />, document.getElementById("app"));
+
+// ReactDOM.render( <h1>Hely.</h1> , document.getElementById("app"));
+
+
+
+</script>
+</head>
+<body>
+	<div class="hold">
+		<h1>Lorem @ipsum-generator says:</h1>
+		<div id="app" class="skinny"></div>
+		<img src="../images/twitter-logo_361x350.png" style="max-width: 110px">
+	</div>
+
+
+</body>
+
+</html>
