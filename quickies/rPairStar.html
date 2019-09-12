@@ -162,23 +162,7 @@
 
 
 <script type="text/babel">
-// make array of objects to display
-let cards = [];
-let card = {before: "", id: 0};
-cards = [
-    {
-        before: "xxyy",
-        id: 0
-    },
-    {
-        before: "hello",
-        id: 1
-    },
-    {
-        before: "aaaa",
-        id: 2
-    }
-]
+ 
 
 function pairStar(s1) {
     let s2 = '';
@@ -198,24 +182,16 @@ function pairStar(s1) {
 }
 
 function Adder(props){
-    console.log("You deserve a change " + props.n1 + ' ' + props.n2);
-    return <h3>{props.n1}</h3>
+    return <h3>{pairStar(props.testString)}</h3>
 
 }
 
 
-
-    const testDivs = (
-    <div  >
-
-
-<Adder n1={13} n2={14} />
+const testDivs = (
+    <div>
+        <Adder testString={"collar woo"}  />
 
 
-
-        <h2>{cards[0].before}</h2>
-        <h2>After:</h2>
-        <h2>{pairStar(cards[0].before)}</h2>
     </div>
     );
 
