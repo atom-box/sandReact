@@ -4,7 +4,7 @@ I'm making small React web apps.<br>Each directory above is a self-contained hom
 These need no special environment; they run completely in browser.
 * quickies/rPairStar.html RUN
 * quickies/rWorldPopulation.html RUN
-They are self-contained.<br>
+<br>They are self-contained.<br>
 Each one is a HTML file;<br>
 their React is enabled by CDN, as is Babel via CDN too.  <br>
 
@@ -13,7 +13,7 @@ These were made by modifying [Create React App](https://github.com/facebook/crea
 * road 0
 * road 1
 * pluralsight
-They won't run unless you go through all the work of setting up their whole PACKAGE / NPM / DEPENDENCIES environment thing.<br>
+<br>They won't run unless you go through all the work of setting up their whole PACKAGE / NPM / DEPENDENCIES environment thing.<br>
 Once that is done, npm start allows [http://localhost:3000](http://localhost:3000) to view them in the browser.<br>
 
 ## Acknowledgements:
