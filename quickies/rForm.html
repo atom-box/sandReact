@@ -155,8 +155,33 @@ background-color: #444;
 
 
 <script type="text/babel">
-function Ahoy({a, b}) {
-    return <h1>hi there {a} hi there {b} hi there</h1>
+
+function Editor({text,}){
+    return <p>Manny {text} </p>
+}
+
+function Counter({count,}){
+    return <p>Moe {count} </p>
+
+}
+
+function ProgressBar({completion,}){
+    return <p>Jack {completion} </p>
+
+}
+
+
+
+function Ahoy() {
+    let a = "stuff ", b = 5, c = 11;
+    return (
+    <form>
+        <Editor text= {a} />
+        <Counter  count = {b} />
+        <ProgressBar completion = {c} />
+    </form>
+
+        )
 }
 
 
