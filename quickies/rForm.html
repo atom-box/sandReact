@@ -156,8 +156,14 @@ background-color: #444;
 
 <script type="text/babel">
 
+function parser (t){
+  return t.length;
+}
+
+
+
 function Editor({text,}){
-    return <p>Manny {text} </p>
+    return <p>{text} </p>
 }
 
 function Counter({count,}){
@@ -166,14 +172,14 @@ function Counter({count,}){
 }
 
 function ProgressBar({completion,}){
-    return <p>Jack {completion} </p>
+    return <progress  >{completion}%</progress>
 
 }
 
 
 
-function Ahoy() {
-    let a = "stuff ", b = 5, c = 11;
+function Main() {
+    let a = "type here!", b = 0, c = 0.3;
     return (
     <form>
         <Editor text= {a} />
@@ -185,7 +191,7 @@ function Ahoy() {
 }
 
 
-ReactDOM.render(<Ahoy a="Guru" b={13} />, document.getElementById('mountNode'));
+ReactDOM.render(<Main  />, document.getElementById('mountNode'));
 </script>
 
 
