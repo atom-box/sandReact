@@ -1,0 +1,211 @@
+<!--  
+
+Show some nested divs with growing population.
+
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Le Monde Popular</title>
+<meta charset="UTF-8"><meta>
+<script src="https://unpkg.com/react@15.6.2/dist/react.js"></script>
+<script src="https://unpkg.com/react-dom@15.6.2/dist/react-dom.js"></script>
+<script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+<link src="https://unpkg.com/tachyons@4.8.0/css/tachyons.min.css
+" rel="stylesheet" ></link>
+<script type="text/babel">
+
+
+function World(props){
+    let t = props.time;
+    t -= 1567700000000;
+    let zees = (t -(t%100))/100  ;
+    let baleans = (t -(t%1234))/1234  ;
+    return (
+        <div class="App-header">
+            <h2>World</h2>
+            <p>Population: {zees *308 + baleans}</p>
+            <div class="App-header">
+                <h2>Africa</h2>
+                <p>Population: {zees * 307}</p>
+                </div>
+            <div class="App-header">
+                <h2>Oceania</h2>
+                <p>Population: {zees + baleans}</p>
+                <div class="App-header">
+                <h2>New Zealand</h2>
+                <p>Population: {zees}</p>
+                </div>
+                <div class="App-header">
+                <h2>Bali</h2>
+                <p>Population: {baleans}</p>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+function booming(){
+    let epoch = new Date().getTime();
+    ReactDOM.render(<World time={epoch}/>, document.getElementById('popular'))
+}
+
+
+
+
+setInterval(booming, 300);
+
+
+
+</script>
+
+<style type="text/css">
+     :root {
+        /* from https://creativexcorner.wordpress.com/2018/03/07/jean-michel-basquiat-one-of-the-last-natural-born-artists/ */
+     --vivid3: rgb(227, 191, 39);  
+     --vivid1: rgb(29, 60, 171); 
+     --vivid2: rgb(213, 90, 34 );
+     --dark1: rgb(7, 23, 53);
+     --light1: rgb(197, 190, 170); 
+     --light2: rgb(222, 223, 223); 
+}
+    body {
+          margin: 0;
+          background-color: var(--light2);
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+            "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+            sans-serif;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+    }
+
+
+
+    }
+
+    .title {
+         background-color: var(--vivid1);
+         color: white ;
+.grow:hover,
+.grow:focus {
+  transform: scale(1.05);
+}
+
+    }
+.App-header {
+  background-color: #282c34;
+  min-height: 3rem; 
+  font-size: calc(10px + 2vmin);
+  color: white;
+  border: solid blue 0.3rem;
+  border-radius: 0.3rem;
+  margin: 0.5rem 0.5rem 0.5rem 3rem;
+}
+
+.monde {
+  /*==f=i=l=l==s=c=r=e=e=n==================*/
+background-color: #000;
+  xmin-width: 1024px; 
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: 100%;
+  /* Set up positioning */
+  position: fixed;
+  /*==f=i=l=l==s=c=r=e=e=n==END============*/
+    display: flex;          /*(1)VERT*/
+    flex-direction: row;    /*(1)VERT*/
+    align-items: center;    /*(1)VERT*/
+    justify-content: center;  /*(2)HORIZ*/
+}
+
+    .title {
+     background-color: var(--vivid2);
+     margin: 2 rem;
+
+    }
+
+     .title__hoegarden {
+        color:  var(--vivid1);
+         text-shadow: 1px 1px 2px white, 0 0 2px gray, 0 0 2px white;
+         font-weight: 500;
+         font-variant: small-caps;
+         font-weight: bolder;
+         font-stretch: condensed;
+         font-family: monospace;
+         /* https://css-tricks.com/almanac/properties/f/font/ */
+    }
+     .title__skinny {
+         font-weight: 100;
+         line-height: 2.6rem;
+    }
+
+
+      .elShadow {
+         box-shadow: 0 3px 3px 0 #bbf, 0 3px 10px 0 white;
+
+    }
+     .dashboard {        
+         background-color: var(--vivid2);
+         color: white;
+         min-width: 15rem;
+
+    }
+
+.vertical-center {
+  justify-content: center;
+  align-items: center;
+}
+.row {
+    display: flex;          /*(1)VERT*/
+    flex-direction: row;
+    justify-content: space-around;  /*(2)HORIZ*/
+    min-width: 100%;
+
+}
+
+.hold {
+        display: flex;          /*(1)VERT*/
+    flex-direction: row;    /*(1)VERT*/
+    align-items: center;    /*(1)VERT*/
+    justify-content: center;  /*(2)HORIZ*/
+}
+
+.bpm {
+    margin: 0.5rem 2rem;
+    padding: 0.5rem; 
+    text-align: center;
+    xmax-width: 40%;
+    border: 0.1rem hidden;
+    border-radius: 0.3rem;
+}
+
+
+
+
+
+</style>
+
+</head>
+
+<body >
+    <div class="monde">
+    <div class="row test-outline">
+
+    <div class="hold bpm">
+    <h1 class="title title__skinny elShadow bpm"><span class="title__hoegarden">All the Lonely People</span></h1>
+    </div>
+
+    <div class="dashboard  elShadow bpm"   id="popular"></div>
+
+    <div class="hold bpm">
+    <div >
+        <a href="https://unsplash.com/photos/hzp_aT02R48"><img  src="images/globe_220x220.jpg"></a> 
+        <!-- image from Unsplash: Louis Reed @_louisreed -->
+    </div>
+    </div>
+</div> <!----e-n-d--r-o-w---------->
+</div><!----e-n-d--m-o-n-d-e------------->
+</body>
+
+</html>
