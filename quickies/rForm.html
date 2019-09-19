@@ -24,7 +24,7 @@ It will run in your browser if you double click on it.
 
 </style>
 <link rel="stylesheet" type="text/css" href="styles/rForm.css" />
-
+<script type="text/javascript" src="helpers/form__prefixes.js"></script>
 
 
 
@@ -42,12 +42,10 @@ function Editor({text,}){
 
 function Counter({count,}){
     return <p>Moe {count} </p>
-
 }
 
 function ProgressBar({completion,}){
     return <progress  >{completion}%</progress>
-
 }
 
 
@@ -85,7 +83,7 @@ ReactDOM.render(<Main  />, document.getElementById('mountNode'));
 <div class="bpm  stay-wide">
   <div class=" bpm">
 
-    <div class="blox back-warm  stay-wide">Moo</div>
+    <div class="blox back-warm  stay-wide" id="exposed1">Moo</div>
     <div class="blox back-gray stay-wide">Cow</div>
 
   </div>
@@ -112,7 +110,6 @@ ReactDOM.render(<Main  />, document.getElementById('mountNode'));
 </ul>
 </div>
 
-zeit.svg
 
 </div>
 </body>
