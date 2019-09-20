@@ -16,12 +16,10 @@ let restore = {};
 // object to hold original colors when page first loads
 let original = {};
 // string to hold prior border color
-let borderWas = 'transparent';
+let borderWas = "#aaa";
 
 
 document.addEventListener('DOMContentLoaded', storeOrigs);
-document.addEventListener('DOMContentLoaded', toggleBorderColor);
-borderWas = 'red';
 
 
 console.log("line 46...");
@@ -126,21 +124,12 @@ function divulge(e){
 }
 
 function toggleBorderColor() {
-
+  console.log('boom')
   const el11 = document.getElementById('bordered1');
   const el12 = document.getElementById('bordered2');
   const c = el11.style.borderColor;
-  
   el11.style.borderColor = borderWas;
   el12.style.borderColor = borderWas;
   borderWas = c;
-
-
-
-
-  // const manyEls = document.getElementsByClassName('bordered');
-  // divulge(manyEls[0]);
-  // // divulge(manyEls[2]);
-
 }
 
