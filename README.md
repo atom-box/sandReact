@@ -2,10 +2,9 @@
 I'm making small React web apps.<br><br>
 [![clickable button](https://github.com/atom-box/sandReact/blob/master/images/go-button__171x80.png)](https://atom-box.github.io/sandReact/)
 ## Three projects above that will run in any browser
-* quickies/rPairStar.html RUN
 * [worldPopulation.html](https://atom-box.github.io/sandReact/quickies/rWorldPopulation.html)
 * [naiveLoremIpsumGenerator.html](https://atom-box.github.io/sandReact/quickies/quickies/rLoremIpsumGenerator.html)
-<br>These run React from the browser.  Their React and Babel are enabled by CDN.<br>
+<br><br>These run React from the browser.  Their React and Babel are enabled by CDN.<br>
 
 ## Three projects above that only run in NODE
 * road 0
