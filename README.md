@@ -1,5 +1,6 @@
 ## What's going on here
-I'm making small React web apps.<br>Each directory above is a self-contained homework project
+I'm making small React web apps.<br><br>
+[![clickable button](https://github.com/atom-box/sandReact/blob/master/images/go-button__171x80.png)](http://example.com)
 ## Three projects above that will run in any browser
 * quickies/rPairStar.html RUN
 * quickies/rWorldPopulation.html RUN
