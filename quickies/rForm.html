@@ -80,19 +80,20 @@ ReactDOM.render(<Main  />, document.getElementById('mountNode'));
 <body>
 <div class=" monde">
 
-<div class="bpm  stay-wide">
-  <div class=" bpm">
+<div class="bpm  stay-wide" id="bordered1">
+  <div class=" bpm" id="bordered2">
 
-    <div class="blox back-warm  stay-wide" id="exposed1">Moo</div>
-    <div class="blox back-gray stay-wide">Cow</div>
+    <div class="blox back-warm  stay-wide bordered" id="exposed1">Moo</div>
+    <div class="blox back-gray stay-wide bordered" >Cow</div>
 
   </div>
 
 <!-- BUTTON IMAGES all from http://simpleicons.org/  -->
-<ul class="buttons-holder bpm">
 
-<li type="button" onclick="visibleDivBorders()">
-<img  src="images/mixer.svg" title="Turn on colored div borders" />
+<ul  class="buttons-holder bpm">
+
+<li type="button" onclick="toggleBorderColor()">
+<img  src="images/mixer.svg" title="Turn on colored div borders"/>
 </li>
 <li type="button" onclick="goPrev()">
 <img src="images/zeit.svg" title="Previous"/> 

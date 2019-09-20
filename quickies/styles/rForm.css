@@ -75,6 +75,7 @@ div, ul, li {
 
 /*=T=H=E=M=E===B=U=T=T=O=N=S=======*/
 
+
 ul {
   list-style-type: none;;
   overflow: hidden;
@@ -83,16 +84,17 @@ ul {
 
 ul li {
   float: right;
-  background-color: #111;
+  background-color: #888;
   color: #ddd;
   width: 3rem;
   height: 3rem;
-  border-radius: 1.5rem;
+  border-radius: 1.8rem;
+  margin-right: 0.3rem;
+  padding: 0.3rem;
 }
 
 li:hover {
-  transform: scale(1.35);
-
+  transform: scale(1.15);
 }
 
 .buttons-holder {

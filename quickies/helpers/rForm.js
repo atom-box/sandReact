@@ -15,10 +15,13 @@ console.log('barracuda');
 let restore = {};
 // object to hold original colors when page first loads
 let original = {};
+// string to hold prior border color
+let borderWas = 'transparent';
 
 
 document.addEventListener('DOMContentLoaded', storeOrigs);
-document.addEventListener('DOMContentLoaded', addLines);
+document.addEventListener('DOMContentLoaded', toggleBorderColor);
+borderWas = 'red';
 
 
 console.log("line 46...");
@@ -113,13 +116,31 @@ function munch(s) {
  '----------------'    '----------------'    '----------------'    '----------------' 
 */
 
-function addLines() {
-  const manyEls = document.getElementsByTagName('div');
-  let i = manyEls.length - 1;
-  while (i--){
-    console.log(manyEls[i].innerHTML);
-    manyEls[i].style.backgroundColor = "red";
+// to run inside of any element
+function divulge(e){
+  for (i in this){
+    if (this[i] !== null){
+    console.log( i + '---'  + this[i] );
+      }
   }
-  console.log('done!');
+}
+
+function toggleBorderColor() {
+
+  const el11 = document.getElementById('bordered1');
+  const el12 = document.getElementById('bordered2');
+  const c = el11.style.borderColor;
+  
+  el11.style.borderColor = borderWas;
+  el12.style.borderColor = borderWas;
+  borderWas = c;
+
+
+
+
+  // const manyEls = document.getElementsByClassName('bordered');
+  // divulge(manyEls[0]);
+  // // divulge(manyEls[2]);
+
 }
 
