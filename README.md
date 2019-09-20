@@ -1,7 +1,6 @@
 ## What's going on here
 I'm making small React web apps.<br><br>
-[![clickable button](https://github.com/atom-box/sandReact/blob/master/images/go-button__171x80.png)](https://atom-box.github.io/sandReact/)
-## Three projects above that will run in any browser
+## Two projects above that will run in any browser
 * [worldPopulation.html](https://atom-box.github.io/sandReact/quickies/rWorldPopulation.html)
 * [naiveLoremIpsumGenerator.html](https://atom-box.github.io/sandReact/quickies/quickies/rLoremIpsumGenerator.html)
 <br><br>These run React from the browser.  Their React and Babel are enabled by CDN.<br>
