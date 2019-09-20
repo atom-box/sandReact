@@ -1,26 +1,19 @@
 ## What's going on here
-I'm making small React web apps.<br>Each directory above is a self-contained homework project
-## Three projects above that will run in any browser
-* quickies/rPairStar.html RUN
-* quickies/rWorldPopulation.html RUN
-* quickies/rLoremIpsumGenerator.html<br><br>
-These need no special environment; they run completely in browser.<br>
-They are self-contained.<br>
-Each one is a HTML file;<br>
-their React is enabled by CDN, as is Babel via CDN too.  <br>
+I'm making small React web apps.<br><br>
+## Two projects above that will run in any browser
+* [worldPopulation.html](https://atom-box.github.io/sandReact/quickies/rWorldPopulation.html)
+* [naiveLoremIpsumGenerator.html](https://atom-box.github.io/sandReact/quickies/quickies/rLoremIpsumGenerator.html)
+<br><br>These run React from the browser.  Their React and Babel are enabled by CDN.<br>
 
-## Three projects above that will only run in NODE
+## Three projects above that only run in NODE
 * road 0
 * road 1
 * pluralsight<br><br>
 These were made by modifying [Create React App](https://github.com/facebook/create-react-app)<br>
-They won't run unless you go through the work of setting up their whole PACKAGE / NPM / DEPENDENCIES environment thing.<br>
-Once that is done, npm start allows [http://localhost:3000](http://localhost:3000) to view them in the browser.<br>
+They won't run live here until I go through the work of setting up their  PACKAGE / NPM / DEPENDENCIES environment thing.<br>
 
 ## For setting up react and learning the syntax I used:
-
 * Book: "The Road to React" by Robin Wieruch
 * Book: "Pragmatic Programmers: React for Real" by Ludovico Fischer , ed. Brian Hogan
-* Course: Pluralsight's Samer Buna's course "Getting Started".
-## For content ideas I used:
-* Coding Bat 
+* Course: Pluralsight's Samer Buna's course ["Getting Started"](https://jscomplete.com/playground/rgs1.6).
+* The docs at [Reactjs.org](https://reactjs.org/tutorial/tutorial.html)
