@@ -3,11 +3,11 @@
      --main-accent: rgb(244,  135, 0 ); 
      --rare-accent: rgb(20,  64,  100 ) ; 
      --main-div: rgb(28, 35,  48  ); 
-     --gray-div: rgb(232,  233, 232 ) ;
+     --gray-div: #e8e8e8 ;
 }
 
  body {
-      background-color: var(--main-div);
+      background-color: var(--gray-div);
       color: #fe0;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
         "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -41,11 +41,11 @@ img {
 }
 
 .square-large {
+    background-color: var(--main-div);
     border-radius: 2rem;
-    border: solid 0.4rem rgb(255, 255, 0);
+    border: solid 0.4rem var(--main-accent);
     height: 28rem;
-    xwidth: 28rem;
-        display: flex;          /*(1)VERT*/
+    display: flex;          /*(1)VERT*/
     flex-direction: column;    /*(1)VERT*/
     align-items: center;    /*(1)VERT*/
     justify-content: center;  /*(2)HORIZ*/
@@ -53,7 +53,7 @@ img {
 
 .square-small {
     border-radius: 2rem;
-    border: solid 0.4rem rgb(255, 255, 0);
+    border: solid 0.4rem var(--main-accent);
     margin: auto 5rem;
     height: auto;
     xwidth: 12rem;
@@ -69,10 +69,16 @@ img {
     text-align: center;
 }
 
-.brand {
+#people {
   position: absolute;
   bottom: 2rem;
   left: 2rem;
+}
+
+#brand {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
 }
 
 .co2 {
