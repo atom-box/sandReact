@@ -10,7 +10,11 @@
 <script  src="https://unpkg.com/react-dom@15.6.2/dist/react-dom.js"  ></script>
 <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js" ></script>
 <script type="text/babel">
+  function Dashboard(props){
+    return <button>Droopal: {props.a1} Jumla: {props.a2}</button>
+}
 
+  ReactDOM.render( <Dashboard a1='hello' a2={2468} /> , document.getElementById('mount')  );
 </script>
 
 
@@ -29,21 +33,7 @@
 <div class="square-large">
   <h1>Amazon's CO<span class="co2">2</span></h1>
     <div class="square-small">
-      <form oninput="x.value = parseInt(seeds.value) * parseInt(crate.value)">
-        <p>Items per order:</p>
-        <input type="range" name="seeds" label="seeds" value="50"/>100  
-           
-        <p>Days to arrive: </p>
-        <input type="textarea" value="33" label="crate" name="crate"/>
-        <br>
-<!-- /*==============================*/ -->
-<input type="radio" name="gender" value=""> Prime<br>
-<input type="radio" name="gender" value=""> 2nd Day<br>
-<input type="radio" name="gender" value="" checked> Standard 
-<!-- /*==============================*/ -->
-        <p>Total Emissions:</p>
-        <output class="bigger-font" name="x">0</output>
-      </form>
+      <div id="mount"></div>
     </div>
 </div>
 
