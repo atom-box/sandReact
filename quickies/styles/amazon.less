@@ -2,9 +2,11 @@
         /* from https://creativexcorner.wordpress.com/2018/03/07/jean-michel-basquiat-one-of-the-last-natural-born-artists/ */
      --main-accent: rgb(244,  135, 0 ); 
      --rare-accent: rgb(20,  64,  100 ) ; 
-     --main-div: rgb(28, 35,  48  ); 
+
      --gray-div: #e8e8e8 ;
 }
+
+@main-div: rgb(28, 35,  48  ); 
 
  body {
       background-color: var(--gray-div);
@@ -41,7 +43,7 @@ img {
 }
 
 .square-large {
-    background-color: var(--main-div);
+    background-color: @main-div;
     border-radius: 2rem;
     border: solid 0.4rem var(--main-accent);
     height: 28rem;

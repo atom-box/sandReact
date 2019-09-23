@@ -3,25 +3,87 @@
 <head>
 <title>Amazon vs Stores</title>
 <meta charset="UTF-8"><meta>
- <meta name="Description" content="Jeff Bezos recently stated that home delivery is more C)2 intensive than brick and mortar stores.  I want to play with the numbers a bit on that concept." />
-      <meta name="keywords" content="climate change, amazon prime, CO2, carbon offsets, carbon tax, climate solutions, capitalism, market solutions" />
+ <meta name="Description" content="This is a tool for calculating the carbon footprint of an online shopping event vs a trip to the store.  Jeff Bezos recently stated that home delivery is less CO2 intensive than brick and mortar stores.  I want to play with the numbers a bit on that concept." />
+      <meta name="keywords" content="climate change, amazon prime, CO2, carbon offsets, carbon tax, climate solutions, capitalism, market solutions, sustainability" />
 
+
+<link rel="stylesheet/less" type="text/css" href="styles/amazon.less">
+<!-- css must load prior to LESS loading -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js" ></script>
 <script   src="https://unpkg.com/react@15.6.2/dist/react.js"  ></script>
 <script  src="https://unpkg.com/react-dom@15.6.2/dist/react-dom.js"  ></script>
 <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js" ></script>
 <script type="text/babel">
+  
+  function Results(){
+    return <div><h1>R E S U L T S </h1></div>
+  }
+
+  function Sliders() {
+    return <div><p>sliders</p></div>
+  }
+
   function Dashboard(props){
-    return <button>Droopal: {props.a1} Jumla: {props.a2}</button>
+    return <div><h1>dashboard</h1></div>
 }
+/*=========M=A=I=N=====================*/
+
+
+class Main extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      items: 5,
+      days: 7,
+      via: 'standard'
+    };
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleChange(event) {
+    this.setState({value: event.target.value});
+  }
+
+  handleSubmit(event) {
+    console.log('so so many items: ' + this.state.numberOfItems);
+    event.preventDefault(); // todo _____
+  }
+
+  render() {
+    return (
+      <form>
+        <label>
+          Ship by Prime:
+          <input
+            name="via"
+            type="checkbox"
+            checked={this.state.via}
+            onChange={this.handleInputChange} />
+        </label>
+        <br />
+        <label>
+  How many items:
+          <input
+            name="numberOfItems"
+            type="range"
+            value={this.state.numberOfItems}
+            onChange={this.handleInputChange} />
+        </label>
+      </form>
+    );
+  }
+
+
+/*=========================================*/
+
 
   ReactDOM.render( <Dashboard a1='hello' a2={2468} /> , document.getElementById('mount')  );
 </script>
 
 
-<link rel="stylesheet" type="text/css" href="styles/amazon.css">
-<style type="text/css">
  
-</style>
 
 </head>
 
