@@ -9,7 +9,6 @@
 
 <link rel="stylesheet/less" type="text/css" href="styles/amazon.less">
 <!-- css must load prior to LESS loading -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js" ></script>
 <script   src="https://unpkg.com/react@15.6.2/dist/react.js"  ></script>
 <script  src="https://unpkg.com/react-dom@15.6.2/dist/react-dom.js"  ></script>
 <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js" ></script>
@@ -47,7 +46,7 @@ class Main extends React.Component {
   }
 
   handleSubmit(event) {
-    console.log('so so many items: ' + this.state.numberOfItems);
+    console.log('so so many items: ' + this.state.items);
     event.preventDefault(); // todo _____
   }
 
@@ -68,18 +67,19 @@ class Main extends React.Component {
           <input
             name="numberOfItems"
             type="range"
-            value={this.state.numberOfItems}
+            value={this.state.items}
             onChange={this.handleInputChange} />
         </label>
       </form>
     );
   }
+}
 
 
 /*=========================================*/
 
 
-  ReactDOM.render( <Dashboard a1='hello' a2={2468} /> , document.getElementById('mount')  );
+  ReactDOM.render( <Main /> , document.getElementById('mount')  );
 </script>
 
 
@@ -93,7 +93,7 @@ class Main extends React.Component {
 <div id="brand"><a href="https://en.wikipedia.org/wiki/John_deere"><img src="images/box-gray.png"   /></a></div>
 <!-- customer illustration by https://undraw.co/ -->
 <div class="square-large">
-  <h1>Amazon's CO<span class="co2">2</span></h1>
+  <h1>Amazon's CO<sub>2</sub></h1>
     <div class="square-small">
       <div id="mount"></div>
     </div>
