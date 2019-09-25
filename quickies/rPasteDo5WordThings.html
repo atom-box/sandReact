@@ -1,0 +1,118 @@
+<!--  
+/*****************************************/ 
+// This is a frame for running snippets of JSX. 
+It will run in your browser if you double click on it.
+/*****************************************/
+
+// Make a form that responds when the TEXTAREA is typed into.
+
+
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>F O R M !</title>
+<meta charset="UTF-8"><meta>
+<script src="https://unpkg.com/react@15.6.2/dist/react.js"></script>
+<script src="https://unpkg.com/react-dom@15.6.2/dist/react-dom.js"></script>
+<script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+
+
+
+<style type="text/css">
+
+</style>
+<link rel="stylesheet" type="text/css" href="styles/rPaste.css" />
+<script type="text/javascript" src="helpers/rPaste.js"></script>
+
+
+
+<script type="text/babel">
+
+function parser (t){
+  return t.length;
+}
+
+
+
+function Editor({text,}){
+    return <p>{text} </p>
+}
+
+function Counter({count,}){
+    return <p>Moe {count} </p>
+}
+
+function ProgressBar({completion,}){
+    return <progress  >{completion}%</progress>
+}
+
+
+
+function Main() {
+    let a = "type here!", b = 0, c = 0.3;
+    return (
+    <form>
+        <Editor text= {a} />
+        <Counter  count = {b} />
+        <ProgressBar completion = {c} />
+    </form>
+
+        )
+}
+
+
+ReactDOM.render(<Main  />, document.getElementById('mountNode'));
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+<div class=" monde">
+
+<div class="bpm  stay-wide" id="bordered1">
+  <div class=" bpm" id="bordered2">
+
+    <div class="blox back-warm  stay-wide bordered" id="exposed1">Moo</div>
+    <div class="blox back-gray stay-wide bordered" >Cow</div>
+
+  </div>
+
+<!-- BUTTON IMAGES all from http://simpleicons.org/  -->
+
+<ul  class="buttons-holder bpm">
+
+<li type="button" onclick="toggleBorderColor()">
+<img  src="images/mixer.svg" title="Turn on colored div borders"/>
+</li>
+<li type="button" onclick="goPrev()">
+<img src="images/zeit.svg" title="Previous"/> 
+</li>
+<li type="button" onclick="goOrig()">
+<img src="images/laravelnova.svg" title="Original Colors" /> 
+</li>
+<li type="button" onclick="goDad()">
+<img src="images/kaios.svg" title="Fave colors of Dad: Ken Genest (1932-2018)"/>
+</li>
+<li type="button" onclick="goContrast()">
+<img src="images/laravelhorizon.svg" title="High Contrast colors for vision impaired" />
+</li>
+
+</ul>
+</div>
+
+
+</div>
+</body>
+
+</html>

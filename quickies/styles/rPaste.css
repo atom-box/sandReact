@@ -1,11 +1,11 @@
     :root {
-        /* from https://creativexcorner.wordpress.com/2018/03/07/jean-michel-basquiat-one-of-the-last-natural-born-artists/ */
-     --vivid3: rgb(227, 191, 39);  
-     --vivid1: rgb(29, 60, 171); 
-     --vivid2: rgb(213, 90, 34 );
-     --dark1: rgb(7, 23, 53);
-     --light1: rgb(197, 190, 170); 
-     --light2: rgb(222, 223, 223); 
+        /* from https://en.wikipedia.org/wiki/Yellow_Submarine_(album) */
+     --vivid1: rgb(251,  224, 9 ); 
+     --vivid2: rgb(45, 151, 68  );
+     --vivid3: rgb(242 , 112, 21  );  
+     --dark1: rgb(23,  76,  123 );
+     --light1: rgb(55, 182, 233 ); 
+     --light2: rgb(85, 107, 120 ); 
 }
     body {
           margin: 0;
@@ -20,7 +20,7 @@
 /*===c=e=n=t=e=r=i=n=g=================*/
 .monde {
   /*==f=i=l=l==s=c=r=e=e=n==================*/
-  background-color: #444;
+  background-color: var(--dark1);
   width: 100%;
   height: 100%;
   /* Set up positioning */
@@ -56,18 +56,18 @@ div, ul, li {
 }
 
 .back-blue {
-  background-color: #aaf
-  color: #eee;
+  background-color: var(--vivid3)
+  color: var(--light1);
 }
 
 .back-warm {
-  background-color: #a41;
+  background-color: var(--vivid2);
   color: #ff9;
   font-size: 1.6rem;
 }
 
 .back-gray {
-  background-color: #aaa;
+  background-color: var(--light2);
   color: #ff9;
   font-size: 1.6rem;
 }
@@ -83,8 +83,8 @@ ul {
 
 ul li {
   float: right;
-  background-color: #aaa;
-  color: #ddd;
+  background-color: var(--vivid1);
+  color: var(--vivid2);
   width: 3rem;
   height: 3rem;
   border-radius: 1.8rem;
