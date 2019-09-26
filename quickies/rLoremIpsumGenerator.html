@@ -2,6 +2,8 @@
 <html>
 <head>
 	<title>Random Sentence</title>
+
+<link rel="icon" href="../images/twitter-logo_361x350.png" type="image/x-icon">
 <script   src="https://unpkg.com/react@15.6.2/dist/react.js"  ></script>
 <script  src="https://unpkg.com/react-dom@15.6.2/dist/react-dom.js"  ></script>
 <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js" ></script>
@@ -21,6 +23,13 @@ align-items: center;
 	width: 40rem;
 }
 
+.line {
+	display: line;
+}
+
+h1:hover {
+	transform: scale(1.3);
+}
 
 </style>
 <script type="text/babel" >
@@ -51,7 +60,7 @@ ReactDOM.render( <Write />, document.getElementById("app"));
 </head>
 <body>
 	<div class="hold">
-		<h1>Lorem @ipsum-generator says:</h1>
+		<h1 class="line" title="Naive in the sense that lots of things like punctuation, capitalization, and word length have not been implemented in this 'quickie' function.">naive@lorem-ipsum-generator says:</h1>
 		<div id="app" class="skinny"></div>
 		<img src="../images/twitter-logo_361x350.png" style="max-width: 110px">
 	</div>
