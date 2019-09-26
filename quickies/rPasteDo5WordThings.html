@@ -12,17 +12,26 @@ It will run in your browser if you double click on it.
 <!DOCTYPE html>
 <html>
 <head>
-<title>F O R M !</title>
+<title>Wordschanger</title>
 <meta charset="UTF-8"><meta>
-<script src="https://unpkg.com/react@15.6.2/dist/react.js"></script>
-<script src="https://unpkg.com/react-dom@15.6.2/dist/react-dom.js"></script>
-<script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+
+<link rel="icon" href="./images/spiral.png" type="image/x-icon">
 
 
 
 <style type="text/css">
 
 </style>
+
+
+
+<script src="https://unpkg.com/react@15.6.2/dist/react.js"></script>
+<script src="https://unpkg.com/react-dom@15.6.2/dist/react-dom.js"></script>
+<script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+
+
+
+
 <link rel="stylesheet" type="text/css" href="styles/rPaste.css" />
 <script type="text/javascript" src="helpers/rPaste.js"></script>
 
@@ -54,8 +63,8 @@ function Main() {
     let a = "type here!", b = 0, c = 0.3;
     return (
     <form>
-        <Editor text= {a} />
-        <Counter  count = {b} />
+        <Editor text={a} />
+        <Counter  count={b} />
         <ProgressBar completion = {c} />
     </form>
 
@@ -81,6 +90,8 @@ ReactDOM.render(<Main  />, document.getElementById('mountNode'));
 <div class=" monde">
 
 <div class="bpm  stay-wide" id="bordered1">
+    <h1 class="box-in">Enter some text, see it transformed</h1>
+    <h2 class="box-out">...by mystery buttons!</h2>
   <div class=" bpm" id="bordered2">
 
     <div class="blox back-warm  stay-wide bordered" id="exposed1">Moo</div>
