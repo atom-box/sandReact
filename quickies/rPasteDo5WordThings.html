@@ -1,8 +1,18 @@
 <!--  
-/*****************************************/ 
-// This is a frame for running snippets of JSX. 
+/***************************************** 
+// This is my JSX. 
 It will run in your browser if you double click on it.
-/*****************************************/
+
+To do list
+Can type into top box
+Can preload topbox with first two glyphs
+As you type, appears in bottom screen.
+Press a button and something happens to bottom screen.  
+Try to make tachyons work on a separate hello world.  Give up and then find alternative 'Using CSS in React'
+Start using grunt task runner -- you already have NPM going in this repo anyway.
+Change glyphs to match their image to what they're loading search SVG chaucer maybe
+
+*****************************************/
 
 // Make a form that responds when the TEXTAREA is typed into.
 
@@ -12,67 +22,38 @@ It will run in your browser if you double click on it.
 <!DOCTYPE html>
 <html>
 <head>
-<title>Wordschanger</title>
+<title>SCHANGER | rPaste</title>
 <meta charset="UTF-8"><meta>
 
 <link rel="icon" href="./images/spiral.png" type="image/x-icon">
-
-
-
-<style type="text/css">
-
-</style>
-
-
-
 <script src="https://unpkg.com/react@15.6.2/dist/react.js"></script>
 <script src="https://unpkg.com/react-dom@15.6.2/dist/react-dom.js"></script>
 <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
-
-
-
-
 <link rel="stylesheet" type="text/css" href="styles/rPaste.css" />
 <script type="text/javascript" src="helpers/rPaste.js"></script>
 
 
 
 <script type="text/babel">
+const TopBox = function(props){
 
-function parser (t){
-  return t.length;
+    return <p>OOOO {props.a} AAAAA</p>
 }
 
-
-
-function Editor({text,}){
-    return <p>{text} </p>
-}
-
-function Counter({count,}){
-    return <p>Moe {count} </p>
-}
-
-function ProgressBar({completion,}){
-    return <progress  >{completion}%</progress>
-}
 
 
 
 function Main() {
-    let a = "type here!", b = 0, c = 0.3;
     return (
     <form>
-        <Editor text={a} />
-        <Counter  count={b} />
-        <ProgressBar completion = {c} />
+        <TopBox a = {13} />
     </form>
 
         )
 }
 
 
-ReactDOM.render(<Main  />, document.getElementById('mountNode'));
+ReactDOM.render(<Main  />, document.getElementById('exposed-1'));
 </script>
 
 
@@ -90,12 +71,11 @@ ReactDOM.render(<Main  />, document.getElementById('mountNode'));
 <div class=" monde">
 
 <div class="bpm  stay-wide" id="bordered1">
-    <h1 class="box-in">Enter some text, see it transformed</h1>
-    <h2 class="box-out">...by mystery buttons!</h2>
+    <h1 >Enter some text, see it transformed</h1>
+    <h2 >...by mystery buttons!</h2>
   <div class=" bpm" id="bordered2">
 
-    <div class="blox back-warm  stay-wide bordered" id="exposed1">Moo</div>
-    <div class="blox back-gray stay-wide bordered" >Cow</div>
+    <div class="blox back-warm  stay-wide bordered box-in" id="exposed-1">Moo</div>
 
   </div>
 
