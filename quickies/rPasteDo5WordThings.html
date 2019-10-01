@@ -36,11 +36,23 @@ Change glyphs to match their image to what they're loading search SVG chaucer ma
 
 <script type="text/babel">
 
+const Main = function() {
+    return (
+      <form onInput="x.value = parseInt(seeds.value) * parseInt(crate.value)">
+        Seeds Per Fruit:<br/>0
+        <input type="range" name="seeds" label="seeds" value="50"/>100  
+           
+        <br/>Fruits Per Crate: 
+        <input type="textarea" value="33" label="crate" name="crate"/>
+
+        <br/>Total Seeds:<br />
+        <output name="x"></output>
+      </form>
+    )
+}
 
 
-
-
-ReactDOM.render( <h1>Hello somebody</h1>  , document.getElementById('exposed-1'));
+ReactDOM.render( <Main />  , document.getElementById('exposed-1'));
 </script>
 
 </head>
