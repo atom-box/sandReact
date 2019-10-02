@@ -36,12 +36,27 @@ Change glyphs to match their image to what they're loading search SVG chaucer ma
 
 <script type="text/babel">
 
-class Main extends React.Component {
-    render() {
+function Editor({text, }){
     return (
-
-        <h1> Hello there, Gin Blossom. </h1>
+        <div>
+            <textarea value={text} id="editor" />
+        </div>
     )
+} 
+
+
+class Main extends React.Component {
+    constructor() {
+        super();
+        this.state = {text: 'Jose Limon'};
+    }
+    render(){
+        // put your destructorers here
+        const {inText} = this.props;
+
+        return (
+            <Editor text={inText} />
+        )
     }
 }
 
