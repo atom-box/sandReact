@@ -1,12 +1,24 @@
     :root {
         /* from https://en.wikipedia.org/wiki/Yellow_Submarine_(album) */
-     --vivid1: rgb(251,  224, 9 ); 
+     --vivid1: rgb(246,  167, 0 ); 
      --vivid2: rgb(45, 151, 68  );
      --vivid3: rgb(242 , 112, 21  );  
      --dark1: rgb(23,  76,  123 );
      --light1: rgb(55, 182, 233 ); 
-     --light2: rgb(85, 107, 120 ); 
+     --light2: rgb(96, 148, 166  ); 
 }
+
+@font-face {
+  font-family: Gin;
+  src: url(./gin.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: OPTIFirminDidot;
+  src: url(./OPTIFirminDidot.otf);
+}
+
+
     body {
           margin: 0;
           background-color: var(--light2);
@@ -55,8 +67,14 @@ div, ul, li {
   margin-bottom: 3rem;
 }
 
+.back-other {
+  background-color: white;
+  color: black;
+}
+
+
 .back-blue {
-  background-color: var(--vivid3)
+  background-color: var(--vivid3);
   color: var(--light1);
 }
 
@@ -71,6 +89,17 @@ div, ul, li {
   color: #ff9;
   font-size: 1.6rem;
 }
+
+.box-in {
+  font-family: OPTIFirminDidot;
+}
+
+.box-out {
+  font-family: monospace !important;
+  border: dotted white;
+  border-width: 0 0.8rem 0 0.8rem;
+}
+
 
 /*=T=H=E=M=E===B=U=T=T=O=N=S=======*/
 
