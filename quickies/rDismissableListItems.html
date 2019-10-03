@@ -32,9 +32,9 @@ As you type, appears in bottom screen.
 
 <script type="text/babel">
 
-function Submarine({seed, id}){
+function Divulge(props){
     return (
-<p>{id}:           {seed} </p>
+<p>{props.tracks[0]} to to to         {props.tracks[2]} </p>
     )
 } 
 
@@ -42,18 +42,31 @@ function Submarine({seed, id}){
 class Main extends React.Component {
     constructor() {
         super();
-        this.state = {verbs: ["call", "work", "return", "find", "float", "give", "count", "walk", "search", "have"], text: 'Jose Lamon'};
+        this.state = {};
+        this.state.brief = [
+            {title: "Mysterious No. 4",
+                time:  "3:38",
+                artist: "Philip Glass"},
+            {title: "Slow, Simple, Sad",
+                time:  "4:00",
+                artist: "Philip Glass"},
+            {title: "Hawking Radiation",
+                time:  "1:44",
+                artist: "Philip Glass"},
+            {title: "Dice",
+                time:  "2:14",
+                artist: "Philip Glass"},
+            {title: "Hawking Radiation with Brass",
+                time:  "1:46",
+                artist: "Philip Glass"},
+        ];
     }
     render(){
         // put your destructorers here
-        const {verbs, text} = this.state;
-        let i = 0;
+        let {brief} = this.state;
         return (
             <ul>
-            <Submarine id={i++} seed={verbs[i]} />
-            <Submarine id={i++} seed={verbs[i]} />
-            <Submarine id={i++} seed={verbs[i]} />
-            <Submarine id={i++} seed={verbs[i]} />
+            <Divulge tracks={brief}  />
             </ul>
         )
     }
@@ -64,13 +77,13 @@ ReactDOM.render( <Main />  , document.getElementById('exposed-1'));
 
 </head>
 <body>
-<div class=" monde">
+<div class=" monde " style="background-color: #eee">
 
-<div class="bpm  stay-wide" id="bordered1">
+<div class="bpm  stay-wide back-gray" id="bordered1">
     <h1 >A list of verbs</h1>
-  <div class=" bpm" id="bordered2">
+  <div class=" bpm back-other" id="bordered2">
 
-    <div class="blox back-warm  stay-wide bordered box-in" id="exposed-1">Moo</div>
+    <div class="blox stay-wide box-out back-gray" id="exposed-1">Moo</div>
 
   </div>
 
