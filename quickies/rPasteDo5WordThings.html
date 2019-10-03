@@ -36,13 +36,14 @@ Change glyphs to match their image to what they're loading search SVG chaucer ma
 
 <script type="text/babel">
 
-function Editor({text, }){
+function Submarine({seed, id}){
+    let word = "Tooie."
     return (
         <div>
-            <textarea value={text} id="editor" />
+            <textarea value={seed}   />
             <div>
-                <h2>here</h2>
-                <h2>there</h2>
+                <h2>S T A T I C</h2>
+                <h2>{id}</h2>
             </div>
         </div>
     )
@@ -52,14 +53,15 @@ function Editor({text, }){
 class Main extends React.Component {
     constructor() {
         super();
-        this.state = {text: 'Jose Limon'};
+        this.state = {id: "13", text: 'Jose Lamon'};
     }
     render(){
         // put your destructorers here
-        const {inText} = this.props;
+        const {text} = this.state;
+        let inText = text;
 
         return (
-            <Editor text={inText} />
+            <Submarine seed={inText} id={this.state.id} />
         )
     }
 }
