@@ -1,0 +1,100 @@
+<!--  
+/***************************************** 
+// This is my JSX. 
+It will run in your browser if you double click on it.
+
+To do list
+Can type into top box
+Can preload topbox with first two glyphs
+As you type, appears in bottom screen.
+
+*****************************************/
+
+// Make a form that responds when the TEXTAREA is typed into.
+
+
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dismiss Items | List</title>
+<meta charset="UTF-8"><meta>
+
+<link rel="icon" href="./images/cloud.svg" type="image/x-icon">
+<script src="https://unpkg.com/react@15.6.2/dist/react.js"></script>
+<script src="https://unpkg.com/react-dom@15.6.2/dist/react-dom.js"></script>
+<script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+<link rel="stylesheet" type="text/css" href="styles/rPaste.css" />
+<script type="text/javascript" src="helpers/rPaste.js"></script>
+
+
+
+<script type="text/babel">
+
+function Submarine({seed, id}){
+    let word = "Tooie."
+    return (
+        <div>
+            {seed}  
+            <div>
+                <h2>{id}</h2>
+            </div>
+        </div>
+    )
+} 
+
+
+class Main extends React.Component {
+    constructor() {
+        super();
+        this.state = {verbs: ["calls", "works", "returns", "finds", "floats"], text: 'Jose Lamon'};
+    }
+    render(){
+        // put your destructorers here
+        const {verbs, text} = this.state;
+        let i = verbs.length;
+        while(i--){
+            console.log(verbs[i]);
+        }
+        let inText = text;
+        return (
+            <Submarine seed={inText} id={verbs[2]} />
+        )
+    }
+}
+
+ReactDOM.render( <Main />  , document.getElementById('exposed-1'));
+</script>
+
+</head>
+<body>
+<div class=" monde">
+
+float sink miss give work count walk search have
+
+<div class="bpm  stay-wide" id="bordered1">
+    <h1 >A list of verbs</h1>
+  <div class=" bpm" id="bordered2">
+
+    <div class="blox back-warm  stay-wide bordered box-in" id="exposed-1">Moo</div>
+
+  </div>
+
+<!-- BUTTON IMAGES all from http://simpleicons.org/  -->
+
+<ul  class="buttons-holder bpm">
+
+<li type="button" onclick="toggleBorderColor()">
+<img  src="images/mixer.svg" title="Turn on colored div borders"/>
+</li>
+ 
+
+</ul>
+</div>
+
+
+</div>
+</body>
+
+</html>
