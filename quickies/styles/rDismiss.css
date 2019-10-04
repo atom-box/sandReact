@@ -55,6 +55,10 @@ div.box-out#exposed-1 {
   border-radius: 0;
 }
 
+img#brand {
+  border-radius: 33px;
+}
+
 .stay-wide {
   min-width: 70%;
 }
@@ -137,8 +141,7 @@ ul {
 
 ul li {
   float: right;
-  background-color: var(--vivid1);
-  color: var(--vivid2);
+  background-color: white;
   width: 3rem;
   height: 3rem;
   border-radius: 1.8rem;
