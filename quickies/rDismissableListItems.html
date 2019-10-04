@@ -32,11 +32,7 @@ As you type, appears in bottom screen.
 
 <script type="text/babel">
 
-function Divulge(props){
-    return (
-<p>{props.tracks[0]} to to to         {props.tracks[2]} </p>
-    )
-} 
+
 
 
 class Main extends React.Component {
@@ -61,25 +57,29 @@ class Main extends React.Component {
                 artist: "Philip Glass"},
         ];
         this.state.misspellings = [
-            "benefited"
-            ,"interesting"
-            ,"irresistible"
-            ,"lightning"
-            ,"noticeable"
-            ,"receive"
-            ,"temperamental"
-            ,"Success"
-            ,"successful"
-            ,"recommendation"
+            {"word": "benefited", "id": 10},
+            ,{"word": "interesting", "id": 11 }
+            ,{"word": "irresistible", "id":  12}
+            ,{"word": "lightning", "id": 13 }
+            ,{"word": "noticeable", "id": 14 }
+            ,{"word": "misspell", "id": 15 }
+            ,{"word": "temperamental", "id": 16 }
+            ,{"word": "Success", "id": 17 }
+            ,{"word": "successful", "id": 18 }
+            ,{"word": "recommendation", "id": 19 }
         ];
     }
+
+
     render(){
         // put your destructorers here
-        let {brief} = this.state;
+        const {misspellings} = this.state;
         return (
-            <ul>
-            <Divulge tracks={brief}  />
-            </ul>
+            <div>
+            {misspellings.map((s) => 
+                {return <div key={s.id}>{s.word}</div>}
+                )}
+            </div>
         )
     }
 }
@@ -92,7 +92,10 @@ ReactDOM.render( <Main />  , document.getElementById('exposed-1'));
 <div class=" monde " style="background-color: #eee">
 
 <div class="bpm  stay-wide back-gray" id="bordered1">
-    <h1 >A list of verbs</h1>
+    <h1 >Words to Spell<span>
+<!-- Louis Wain - Engraving - 1892 - Owls -->
+<img src="images/owl-66x70.png" width="66" height="70"  />
+    </span></h1>
   <div class=" bpm back-other" id="bordered2">
 
     <div class="blox stay-wide box-out back-gray" id="exposed-1">Moo</div>
@@ -106,11 +109,9 @@ ReactDOM.render( <Main />  , document.getElementById('exposed-1'));
 <li type="button" onclick="toggleBorderColor()">
 <img  src="images/mixer.svg" title="Turn on colored div borders"/>
 </li>
- 
-
 </ul>
-</div>
 
+</div>
 
 </div>
 </body>
