@@ -14,7 +14,7 @@ These were made with [Create React App](https://github.com/facebook/create-react
 * pluralsight<br><br>
 For these to run in public I need to deploy them at my Digital Ocean.  I'm not on that chapter of the book.  And I'm cautious because they are a security vulnerability to my server.<br>
 
-## For setting up react and learning the syntax I used:
+## Invaluable:
 * Book: "The Road to React" by Robin Wieruch
 * Book: "Pragmatic Programmers: React for Real" by Ludovico Fischer , ed. Brian Hogan
 * Course: Pluralsight's Samer Buna course ["Getting Started"](https://jscomplete.com/playground/rgs1.6).
