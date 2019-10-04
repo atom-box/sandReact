@@ -76,13 +76,14 @@ class Main extends React.Component {
         const {misspellings} = this.state;
         return (
             <div>
-            {misspellings.map((s) => 
-                {return <div key={s.id}>{s.word}</div>}
-                )}
+            {misspellings.map( s => 
+             <div key={s.id}>{s.word}</div>
+             )}
             </div>
-        )
+            )
     }
 }
+<!-- Notice the implied return on the line with misspellings.map -->
 
 ReactDOM.render( <Main />  , document.getElementById('exposed-1'));
 </script>
