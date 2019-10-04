@@ -96,7 +96,7 @@ div, ul, li {
 
 .box-out {
   font-family: monospace !important;
-  border: dotted white;
+  border: dotted #555;
   border-width: 0 0.8rem 0 0.8rem;
 }
 
@@ -114,6 +114,12 @@ div, ul, li {
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
+
+.column-centered {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
 }
 
 /*=T=H=E=M=E===B=U=T=T=O=N=S=======*/
