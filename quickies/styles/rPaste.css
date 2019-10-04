@@ -100,6 +100,21 @@ div, ul, li {
   border-width: 0 0.8rem 0 0.8rem;
 }
 
+.title-70 {
+  /* to match adjacent image height */
+  height: 70px;
+}
+
+.title-70 h1 {
+  xborder: solid red 0.2rem;
+  margin-top: 0rem;
+}
+
+.row-for-owl-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 
 /*=T=H=E=M=E===B=U=T=T=O=N=S=======*/
 
