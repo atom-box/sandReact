@@ -56,7 +56,8 @@ div.box-out#exposed-1 {
 }
 
 img#brand {
-  border-radius: 33px;
+  border-radius: 36px;
+  border: solid rgb(154, 154, 154) 3px;
 }
 
 .stay-wide {
@@ -144,9 +145,10 @@ ul li {
   background-color: white;
   width: 3rem;
   height: 3rem;
-  border-radius: 1.8rem;
+  border-radius: 1.9rem;
   margin-right: 0.3rem;
   padding: 0.3rem;
+  margin-top: 5px;
 }
 
 li:hover {
