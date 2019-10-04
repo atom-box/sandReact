@@ -1,0 +1,146 @@
+    :root {
+        /* from https://en.wikipedia.org/wiki/Yellow_Submarine_(album) */
+     --vivid1: rgb(246,  167, 0 ); 
+     --vivid2: rgb(45, 151, 68  );
+     --vivid3: rgb(242 , 112, 21  );  
+     --dark1: rgb(23,  76,  123 );
+     --light1: rgb(55, 182, 233 ); 
+     --light2: rgb(96, 148, 166  ); 
+}
+
+@font-face {
+  font-family: Gin;
+  src: url(./gin.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: OPTIFirminDidot;
+  src: url(./OPTIFirminDidot.otf);
+}
+
+
+    body {
+          margin: 0;
+          background-color: var(--light2);
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+            sans-serif;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+    }
+
+
+/*===c=e=n=t=e=r=i=n=g=================*/
+.monde {
+  /*==f=i=l=l==s=c=r=e=e=n==================*/
+  background-color: var(--dark1);
+  width: 100%;
+  height: 100%;
+  /* Set up positioning */
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+
+/*===d=i=v=s===&====b=o=u=n=d=s=======*/
+
+div, ul, li {
+  border: solid transparent 0.2rem;
+  border-radius: 0.3rem; 
+}
+
+.stay-wide {
+  min-width: 70%;
+}
+
+.bpm {
+  padding: 0.5rem;
+  margin: 0.5rem;
+}
+
+.blox {
+  min-width: 10rem;
+  min-height: 5rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.back-other {
+  background-color: white;
+  color: black;
+}
+
+
+.back-blue {
+  background-color: var(--vivid3);
+  color: var(--light1);
+}
+
+.back-warm {
+  background-color: var(--vivid2);
+  color: #ff9;
+  font-size: 1.6rem;
+}
+
+.back-gray {
+  background-color: var(--light2);
+  color: #ff9;
+  font-size: 1.6rem;
+}
+
+.box-in {
+  font-family: OPTIFirminDidot;
+}
+
+.box-out {
+  font-family: monospace !important;
+  border: dotted white;
+  border-width: 0 0.8rem 0 0.8rem;
+}
+
+.title-70 {
+  /* to match adjacent image height */
+  height: 70px;
+}
+
+.title-70 h1 {
+  xborder: solid red 0.2rem;
+  margin-top: 0rem;
+}
+
+.row-for-owl-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/*=T=H=E=M=E===B=U=T=T=O=N=S=======*/
+
+
+ul {
+  list-style-type: none;;
+  overflow: hidden;
+  width: 96%;
+}
+
+ul li {
+  float: right;
+  background-color: var(--vivid1);
+  color: var(--vivid2);
+  width: 3rem;
+  height: 3rem;
+  border-radius: 1.8rem;
+  margin-right: 0.3rem;
+  padding: 0.3rem;
+}
+
+li:hover {
+  transform: scale(1.15);
+}
+
+.buttons-holder {
+  height: auto;
+  display: inline;
+}
