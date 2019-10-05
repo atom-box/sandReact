@@ -71,18 +71,38 @@ class Main extends React.Component {
     }
 
 
+
+
     render(){
+        // style
+const pStyle = {
+  border: 'solid blue 2px',
+};
+
+
+
+
         // put your destructorers here
         const {misspellings} = this.state;
         return (
             <div>
             {misspellings.map( s => 
-             <div key={s.id} onClick={() => console.log(s.id)  } >{s.word}</div>
+                <div 
+                    key={s.id} 
+                    style= {pStyle}
+                    onClick={() => console.log(s.id)  } 
+                    onMouseOver= {() => console.log('Over')}
+                >
+                    {s.word}
+                </div>
              )}
             </div>
             )
     }
 }
+
+{/*  FROM https://codeburst.io/4-four-ways-to-style-react-components-ac6f323da822 */}
+
 {/* Notice the implied return on the line with misspellings.map  */}
 ReactDOM.render( <Main />  , document.getElementById('exposed-1'));
 </script>
