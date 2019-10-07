@@ -64,13 +64,22 @@ class Main extends React.Component {
             ,{"word": "successful", "id": 18 }
             ,{"word": "recommendation", "id": 19 }
         ];
+        this.goAway = this.goAway.bind(this);
+
+    }    // end --c-o-n-s-t-r-u-c-t-o-r-------------
+
+    goAway(id){
+        const keeperItem = item => item.id !== id;
+        const updatedMisspellings = this.state.misspellings.filter(keeperItem);
+        this.setState( {misspellings: updatedMisspellings} );
     }
+
 
     render(){
         // style
         const pStyle = {
          fontSize: "1.6rem",
-    };
+    };   //  --e-n-d----r-e-n-d-e-r------------
 
 
     // put your destructorers here
@@ -81,7 +90,7 @@ class Main extends React.Component {
             <div 
                 key={s.id} 
                 style= {pStyle}
-                onClick={() => console.log(s.id)  } 
+                onClick={() => this.goAway(s.id)  } 
                 onMouseOver= {() => console.log('Over')}
             >
                 {s.word}
