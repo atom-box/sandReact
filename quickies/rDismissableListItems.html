@@ -28,11 +28,7 @@ As you type, appears in bottom screen.
 <link rel="stylesheet" type="text/css" href="styles/rDismiss.css" />
 <script type="text/javascript" src="helpers/rPaste.js"></script>
 
-
-
 <script type="text/babel">
-
-
 
 
 class Main extends React.Component {
@@ -70,34 +66,29 @@ class Main extends React.Component {
         ];
     }
 
-
-
-
     render(){
         // style
-const pStyle = {
-  border: 'solid blue 2px',
-};
+        const pStyle = {
+         fontSize: "1.6rem",
+    };
 
 
-
-
-        // put your destructorers here
-        const {misspellings} = this.state;
-        return (
-            <div>
-            {misspellings.map( s => 
-                <div 
-                    key={s.id} 
-                    style= {pStyle}
-                    onClick={() => console.log(s.id)  } 
-                    onMouseOver= {() => console.log('Over')}
-                >
-                    {s.word}
-                </div>
-             )}
+    // put your destructorers here
+    const {misspellings} = this.state;
+    return (
+        <div>
+        {misspellings.map( s => 
+            <div 
+                key={s.id} 
+                style= {pStyle}
+                onClick={() => console.log(s.id)  } 
+                onMouseOver= {() => console.log('Over')}
+            >
+                {s.word}
             </div>
-            )
+         )}
+        </div>
+        )
     }
 }
 
@@ -108,36 +99,46 @@ ReactDOM.render( <Main />  , document.getElementById('exposed-1'));
 </script>
 
 </head>
+
+
+
+
+
+
 <body>
-<div class=" monde " style="background-color: #eee">
+    <div class=" monde " style="background-color: #eee">
 
-<div class="bpm  stay-wide back-gray" id="bordered1">
-<div class="row-for-owl-title">
-<div class="title-70">
-    <h1 >Words to Spell</h1>
-</div><!-- vertical -->
-<!-- Louis Wain - Engraving - 1892 - Owls -->
-<img id="brand" src="./images/owl-66x70.png" width="66" height="70"  />
-</div><!-- row -->
+        <div class="bpm  stay-wide back-gray" id="bordered1">
+            <div class="row-for-owl-title">
+                <div class="title-70">
+                    <h1>Words to Spell</h1>
+                </div>
+                <!-- vertical -->
+                <!-- Louis Wain - Engraving - 1892 - Owls -->
+                <img id="brand" src="./images/owl-66x70.png" width="66" height="70" />
+            </div>
+            <!-- row -->
 
 
-  <div class="  back-other column-centered" id="bordered2">
-    <img src="./images/five-owls_469x91.png" />
-    <div class=" stay-wide box-out back-gray" id="exposed-1">Moo</div>
-  </div>
+            <div class="  back-other column-centered" id="bordered2">
+                <img src="./images/five-owls_469x91.png" />
+                <div class=" stay-wide box-out back-gray" id="exposed-1">Moo</div>
+            </div>
 
-<!-- BUTTON IMAGES all from http://simpleicons.org/  -->
+            <!-- BUTTON IMAGES all from http://simpleicons.org/  -->
 
-<ul  class="buttons-holder bpm">
+            <ul class="buttons-holder bpm">
 
-<li type="button" onclick="toggleBorderColor()">
-<img  src="images/mixer.svg" title="Turn on colored div borders"/>
-</li>
-</ul>
+                <li type="button" onclick="toggleBorderColor()">
+                    <img src="images/mixer.svg" title="Turn on colored div borders" />
+                </li>
+            </ul>
 
-</div>
+        </div>
 
-</div>
-</body>
+    </div>
+    </body>
+
+
 
 </html>
