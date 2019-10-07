@@ -52,6 +52,7 @@ class Main extends React.Component {
                 time:  "1:46",
                 artist: "Philip Glass"},
         ];
+        this.state.removedWords = [];
         this.state.misspellings = [
             {"word": "benefited", "id": 10},
             ,{"word": "interesting", "id": 11 }
@@ -70,6 +71,9 @@ class Main extends React.Component {
 
     goAway(id){
         const keeperItem = item => item.id !== id;
+        const removedItem = item => item.id === id;
+        this.state.removedWords.push(( removedItem )); 
+        // Constant works in the following, being destroyed at end of function
         const updatedMisspellings = this.state.misspellings.filter(keeperItem);
         this.setState( {misspellings: updatedMisspellings} );
     }
@@ -88,11 +92,11 @@ class Main extends React.Component {
     return (
         <div>
         {misspellings.map( s => 
-            <div 
+            <div style= {pStyle}
                 key={s.id} 
-                style= {pStyle}
+                
                 onClick={() => this.goAway(s.id)  } 
-                onMouseOver= {() => console.log('Over')}
+                onMouseOver= {() => console.log(`# of removed: ` + this.state.removedWords.length )}
             >
                 {s.word}
             </div>
@@ -122,6 +126,7 @@ ReactDOM.render( <Main />  , document.getElementById('exposed-1'));
             <div class="row-for-owl-title">
                 <div class="title-70">
                     <h1>Words to Spell</h1>
+                    <h2>Click to remove:</h2>
                 </div>
                 <!-- vertical -->
                 <!-- Louis Wain - Engraving - 1892 - Owls -->
