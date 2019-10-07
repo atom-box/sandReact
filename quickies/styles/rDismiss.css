@@ -60,6 +60,11 @@ img#brand {
   border: solid rgb(154, 154, 154) 3px;
 }
 
+h2 {font-size: 1rem;
+    margin-top: -2rem;
+    margin-left: 20%;
+}
+
 .stay-wide {
   min-width: 70%;
 }
@@ -111,11 +116,10 @@ img#brand {
 
 .title-70 {
   /* to match adjacent image height */
-  height: 70px;
+  height: 8 rem;
 }
 
 .title-70 h1 {
-  xborder: solid red 0.2rem;
   margin-top: 0rem;
 }
 
