@@ -7,7 +7,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>Tabula Rasa</title>
+    <title>Orange Utility</title>
 <link rel="icon" href="./images/dryer.png" type="image/x-icon">
 <script src="https://unpkg.com/react@15.6.2/dist/react.js"></script>
 <script src="https://unpkg.com/react-dom@15.6.2/dist/react-dom.js"></script>
@@ -17,7 +17,11 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
 
-
+<script type="text/javascript">
+  function paul(){
+    console.log('hi hippy');
+  }
+</script>
 
 
 <style type="text/css">
@@ -73,7 +77,7 @@ h4 + p {
 
 
 </style>
- 
+
 
   </head>
   <body>
@@ -85,16 +89,16 @@ h4 + p {
   <p>Type some words</p>
   <form class="form-inline">
     <div class="input-group">
-      <input type="email" class="form-control" size="50" placeholder="type here" required>
+      <input type="text" class="form-control" onChange="paul()"  size="50" placeholder="type here" required />
       <div class="input-group-btn">
-        <button type="button" class="btn btn-danger">Clear</button>
+        <button type="button" class="btn btn-danger" onClick="paul()">Clear</button>
       </div>
     </div>
   </form>
 </div>
 
 <div class="container-fluid text-center">
-  <h2>YOUR WORDS...</h2>
+  <h2>YORe WORDS...</h2>
   <h4>...transformed</h4>
   <br>
   <div class="row">
@@ -139,17 +143,5 @@ h4 + p {
   </a>
   <p>Made by Evan Genest at <a href="http://littlefurnace.com" title="Visit my portfolio">Little Furnace</a></p>
 </footer>
-
-
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
   </body>
 </html>
