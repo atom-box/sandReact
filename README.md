@@ -2,9 +2,9 @@
 I'm making small React web apps.<br><br>
 ## Three of my projects
 These will run in the browser if you click them:
-* [spelling owl](https://atom-box.github.io/sandReact/quickies/rDismissableListItems.html)
-* [worldPopulation.html](https://atom-box.github.io/sandReact/quickies/rWorldPopulation.html)
-* [naiveLoremIpsumGenerator.html](https://atom-box.github.io/sandReact/quickies/rLoremIpsumGenerator.html)
+* [Utility](https://atom-box.github.io/sandReact/quickies/rUtility.html)
+* [Spelling Owl](https://atom-box.github.io/sandReact/quickies/rDismissableListItems.html)
+* [WorldPopulation.html](https://atom-box.github.io/sandReact/quickies/rWorldPopulation.html)
 <br><br>These run React from the browser.  Their React and Babel are enabled by CDN.<br>
 
 ## Three more of my projects
