@@ -83,7 +83,7 @@ class Main extends React.Component {
         // style
         const pStyle = {
          fontSize: "1.6rem",
-         cursor: "pointer",
+         cursor: "help",
     };   //  --e-n-d----r-e-n-d-e-r------------
 
 
@@ -94,7 +94,6 @@ class Main extends React.Component {
         {misspellings.map( s => 
             <div style= {pStyle}
                 key={s.id} 
-                
                 onClick={() => this.goAway(s.id)  } 
                 onMouseOver= {() => console.log(`# of removed: ` + this.state.removedWords.length )}
             >
@@ -125,7 +124,7 @@ ReactDOM.render( <Main />  , document.getElementById('exposed-1'));
         <div class="bpm  stay-wide back-gray" id="bordered1">
             <div class="row-for-owl-title">
                 <div class="title-70">
-                    <h1>Words to Spell</h1>
+                    <h1>Can you spell these?</h1>
                     <h2>Click to remove:</h2>
                 </div>
                 <!-- vertical -->
