@@ -1,0 +1,24 @@
+div {
+	font-family: monospace;
+}
+
+.tab-list {
+  border-bottom: 1px solid #ccc;
+  border-radius: 0.3rem;
+  padding-left: 0;
+}
+
+.tab-list-item {
+  display: inline-block;
+  list-style: none;
+  margin-bottom: -1px;
+  padding: 0.5rem 0.75rem;
+  color: gray;
+}
+
+.tab-list-active {
+	color: black;
+  background-color: white;
+  border: solid #ccc;
+  border-width: 1px 1px 0 1px;
+}
