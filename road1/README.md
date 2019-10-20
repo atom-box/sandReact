@@ -1,8 +1,12 @@
+This is deprecated.  I have given it its own repository: 
+rZumtum.
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Evan writes:
 1. This folder, Road1, intends to solve the WordCounter problem from Chapter1 of the Yarn Book.
-
+2. Taking this towards a TABS sandbox via 
+3. https://codesandbox.io/s/7mjxpo9k7x  
+4. https://alligator.io/react/tabs-component/
 
 ## Available Scripts
 
