@@ -26,7 +26,7 @@ console.log("line 46...");
 
 // store original colors, so less revision hassle
 function storeOrigs() {
-  let el3 = document.getElementById("exposed1")
+  let el3 = document.getElementById("mountNode")
   console.log("...stored orig colors succesfully.");
   original.textColor = el3.style.color;
   original.backgroundColor = el3.style.background;    
@@ -34,7 +34,7 @@ function storeOrigs() {
 
 
 function goDad() {
-  let el3 = document.getElementById("exposed1")
+  let el3 = document.getElementById("mountNode")
   restore.textColor = el3.style.color;
   restore.backgroundColor = el3.style.background;
   el3.style.color = "#ff0";
@@ -42,7 +42,7 @@ function goDad() {
 }
 
 function goContrast() {
-  let el3 = document.getElementById("exposed1")
+  let el3 = document.getElementById("mountNode")
   restore.textColor = el3.style.color;
   restore.backgroundColor = el3.style.background;
   el3.style.color = "black";
@@ -50,13 +50,13 @@ function goContrast() {
 }
 
 function goPrev() {
-  let el3 = document.getElementById("exposed1")
+  let el3 = document.getElementById("mountNode")
   el3.style.color = restore.textColor;
   el3.style.background = restore.backgroundColor;    
 }
 
 function goOrig() {
-  let el3 = document.getElementById("exposed1")
+  let el3 = document.getElementById("mountNode")
   restore.textColor = el3.style.color;
   restore.backgroundColor = el3.style.background;
   el3.style.color = original.textColor;
