@@ -1,0 +1,108 @@
+:root {
+    /* from https://creativexcorner.wordpress.com/2018/03/07/jean-michel-basquiat-one-of-the-last-natural-born-artists/ */
+ --vivid3: rgb(227, 191, 39);  
+ --vivid1: rgb(29, 60, 171); 
+ --vivid2: rgb(213, 90, 34 );
+ --darkCool: rgb(59, 43, 68);
+ --darkNeutral: rgb(50, 50, 50); 
+ --darkWarm: rgb(68, 30, 60) ;
+ --light2: rgb(222, 223, 223); 
+}
+
+/* For darkthemes I see DISCORD puts #222 with shadows even.  I can try shadows on #333, #444 then.  */ 
+body {
+          margin: 0;
+          background-color: var(--darkCool);
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+            sans-serif;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+    }
+
+
+/*===c=e=n=t=e=r=i=n=g=================*/
+.monde {
+  /*==f=i=l=l==s=c=r=e=e=n==================*/
+  background-color: var(--darkNeutral);
+  width: 100%;
+  height: 100%;
+  /* Set up positioning */
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+
+/*===d=i=v=s===&====b=o=u=n=d=s=======*/
+
+div, ul, li {
+  border: solid transparent 0.2rem;
+  border-radius: 0.3rem; 
+}
+
+.stay-wide {
+  min-width: 70%;
+}
+
+.bpm {
+  padding: 0.5rem;
+  margin: 0.5rem;
+}
+
+.blox {
+  min-width: 10rem;
+  min-height: 5rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-warm {
+  background-color: var(--darkWarm);
+  color: #ff9;
+  font-size: 1.6rem;
+}
+
+
+.back-gray {
+  background-color: var(--darkCool);
+  color: #ff9;
+  font-size: 1.6rem;
+}
+
+/*=T=H=E=M=E===B=U=T=T=O=N=S=======*/
+
+
+ul {
+  list-style-type: none;;
+  overflow: hidden;
+  width: 96%;
+}
+
+ul li {
+  float: right;
+  background-color: #aaa;
+  color: #ddd;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 1.8rem;
+  margin-right: 0.3rem;
+  padding: 0.3rem;
+}
+
+li:hover {
+  transform: scale(1.15);
+}
+
+.buttons-holder {
+  height: auto;
+  display: inline;
+}
+
+.shadow {
+    box-shadow: 3px 3px 1px #000;
+}
