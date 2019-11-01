@@ -1,13 +1,12 @@
 ## What's going on here
 I'm making small React web apps.<br><br>
-## Three of my projects
+## Two of my exercises
 These will run in the browser if you click them:
-* [Utility](https://atom-box.github.io/sandReact/quickies/rUtility.html)
 * [Spelling Owl](https://atom-box.github.io/sandReact/quickies/rDismissableListItems.html)
 * [WorldPopulation.html](https://atom-box.github.io/sandReact/quickies/rWorldPopulation.html)
 <br><br>These run React from the browser.  Their React and Babel are enabled by CDN.<br>
 
-## Three more of my projects
+## Three more of my exercises
 These were made with [Create React App](https://github.com/facebook/create-react-app), so they need to spin up a little server.  We can't do that here but there code is in sandReact:
 * road 0
 * road 1
