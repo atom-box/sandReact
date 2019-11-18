@@ -1,8 +1,11 @@
 import  React, { Component } from 'react';
+import Menu from './components/MenuComponent';
 import {
     Navbar,
     NavbarBrand
 } from 'reactstrap';
+
+const thought1 = "Choose high-leverage activities"
 
 class App extends Component {
 
@@ -12,7 +15,7 @@ class App extends Component {
       <div className="App">
         <Navbar dark color="primary">
           <div className="container">
-            <NavbarBrand href="/">Ristorante Con Fusion</NavbarBrand>
+            <NavbarBrand href="/">{thought1} and {thought1}</NavbarBrand>
           </div>
         </Navbar>
       </div>
