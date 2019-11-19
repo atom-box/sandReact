@@ -35,9 +35,10 @@ handleInput(dish){
       <Navbar dark color="danger">
         <div className="container">
           <Media left href="#">
+          <NavbarBrand left href="/">Ristorante <br />con Fusion</NavbarBrand>
           <Media object src="assets/images/logo.png" alt="Logo for con Fusion restaurant" />
           </Media>
-          <NavbarBrand href="/">Ristorante con Fusion</NavbarBrand>
+
         </div>
       </Navbar>
     <div className="container">
