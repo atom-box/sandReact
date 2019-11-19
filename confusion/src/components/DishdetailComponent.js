@@ -4,20 +4,20 @@ import { Card, CardBody, CardTitle, CardText, CardImg } from 'reactstrap';
 class DishDetail extends Component {
 
 
-  renderDish(dish) {
-    if (dish.dish != null) {
-      console.log(`dish was okay: [${dish.dish.name}]`);
+  renderDish() {
+    if (this.props.dish != null) {
+      console.log(`dish was okay: [${this.props.dish.name}]`);
       return(
         <Card className="col-12 col-md-5 m-1">
-          <CardImg width="100%" src={dish.dish.image} alt={dish.dish.name} />
+          <CardImg width="100%" src={this.props.dish.image} alt={this.props.dish.name} />
           <CardBody>
-            <CardTitle>{dish.dish.name}</CardTitle>
-            <CardText>{dish.dish.description}</CardText>
+            <CardTitle>{this.props.dish.name}</CardTitle>
+            <CardText>{this.props.dish.description}</CardText>
           </CardBody>
         </Card>
       )
     } else {
-      console.log(`dish was null: [${dish.dish}]`);
+      console.log(`dish was null: [${this.props.dish}]`);
       return(
         <div>poo</div>
       )
@@ -25,28 +25,28 @@ class DishDetail extends Component {
   }
 
 
-
   render() {
     if (this.props.dish != null){
-    const {name, comments, id} = this.props.dish;
-    console.log(name);
-    console.log(comments[1].comment);
-    console.log(id);
+    const xxx = this.renderDish(), yyy =  "horse";
+      const {name, comments, id} = this.props.dish;
+      console.log(name);
+      console.log(comments[1].comment);
+      console.log(id);
 
 
-    return (
-    <div>
-      <div className="row">
-        
+      return (
+      <div>
+        <div className="row">
+          {xxx}
+        </div>
+        <div className="row">
+          <h4>Comments</h4>
+          {yyy}
+        </div>
       </div>
-      <div className="row">
-        <h4>Comments</h4>
-        {id}
-      </div>
-    </div>
-    )
-  } else { return <div></div>}
-  }
+      )
+    } else { return <div></div>}
+    }
 }
 
 
