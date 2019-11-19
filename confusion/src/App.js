@@ -10,11 +10,24 @@ import {
 } from 'reactstrap';
 
 
+
+
 class App extends Component {
+
+
   constructor(props){
     super(props);
+    this.handleInput = this.handleInput.bind(this);
+
     this.state = {dishes: DISHES,  selectedDish: null}
   }
+
+
+
+handleInput(dish){
+      this.setState({selectedDish: dish})
+    }
+
 
   render() {
     return (
@@ -28,8 +41,11 @@ class App extends Component {
         </div>
       </Navbar>
     <div className="container">
-        <Menu dishes={this.state.dishes}/>
-        <DishDetail dish={this.state.selectedDish} />
+        <Menu dishes={this.state.dishes} ifClick={this.handleInput}/>
+
+
+
+        <DishDetail dish={this.state.selectedDish } />
     </div>
     </div>
     );

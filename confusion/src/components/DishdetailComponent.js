@@ -4,28 +4,32 @@ import { Card, CardBody, CardTitle, CardText, CardImg } from 'reactstrap';
 class DishDetail extends Component {
 
       renderDish(dish) {
-        if (dish != null) {
+        if (dish.dish != null) {
+        console.log(`dish was okay: [${dish.dish.name}]`);
+
           return(
             <Card>
-              <CardImg width="100%" src={dish.image} alt={dish.name} />
+              <CardImg width="100%" src={dish.dish.image} alt={dish.dish.name} />
               <CardBody>
-                <CardTitle>{dish.name}</CardTitle>
-                <CardText>{dish.description}</CardText>
+                <CardTitle>{dish.dish.name}</CardTitle>
+                <CardText>{dish.dish.description}</CardText>
               </CardBody>
             </Card>
           )
         } else {
+        console.log(`dish was null: [${dish.dish}]`);
+
           return(
-            <div></div>
+            <div>poo</div>
           )
         }
       }
 
 
-  render(dish) {
+  render() {
     return (
             <div className="row">
-                  {this.renderDish(this.props.dish)}
+                  {this.renderDish(this.props)}
             </div>
     )
   }
