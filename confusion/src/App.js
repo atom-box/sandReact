@@ -37,7 +37,7 @@ handleInput(dish){
           <Media left href="#">
           <Media object src="assets/images/logo.png" alt="Logo for con Fusion restaurant" />
           </Media>
-          <NavbarBrand href="/">cOn FuSiOn</NavbarBrand>
+          <NavbarBrand href="/">Ristorante con Fusion</NavbarBrand>
         </div>
       </Navbar>
     <div className="container">
