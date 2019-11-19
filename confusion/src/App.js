@@ -1,12 +1,12 @@
 import  React, { Component } from 'react';
 import Menu from './components/MenuComponent';
+import DishDetail from './components/DishdetailComponent';
 import {
     Navbar,
     NavbarBrand,
     Media
 } from 'reactstrap';
 
-const thought1 = "Choose high-leverage activities"
 
 class App extends Component {
 
@@ -24,10 +24,11 @@ class App extends Component {
 
 
 
-            <NavbarBrand href="/">{thought1} and {thought1}</NavbarBrand>
+            <NavbarBrand href="/">cOn FuSiOn</NavbarBrand>
           </div>
         </Navbar>
         <Menu />
+        <DishDetail dish="null" />
       </div>
 
 
