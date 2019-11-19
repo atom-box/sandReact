@@ -34,7 +34,7 @@ class App extends Component {
           </div>
         </Navbar>
         <Menu dishes={this.state.dishes}/>
-        <DishDetail dish="null" />
+        <DishDetail dish={this.state.dishes[2]} />
       </div>
 
 
