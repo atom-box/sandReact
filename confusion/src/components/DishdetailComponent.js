@@ -3,18 +3,30 @@ import { Card, CardBody, CardTitle, CardText, CardImg } from 'reactstrap';
 
 class DishDetail extends Component {
 
+      renderDish(dish) {
+        if (dish != null) {
+          return(
+            <Card>
+              <CardImg width="100%" src={dish.image} alt={dish.name} />
+              <CardBody>
+                <CardTitle>{dish.name}</CardTitle>
+                <CardText>{dish.description}</CardText>
+              </CardBody>
+            </Card>
+          )
+        } else {
+          return(
+            <div></div>
+          )
+        }
+      }
+
+
   render(dish) {
     return (
-      <Card>
-        <CardImg top width="100%" src="/assets/318x180.svg" alt="Card image cap" />
-        <CardBody>
-          <CardTitle>Card Title</CardTitle>
-          <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</CardText>
-          <CardText>
-            <small className="text-muted">Last updated 3 mins ago</small>
-          </CardText>
-        </CardBody>
-      </Card>
+            <div className="row">
+                  {this.renderDish(this.props.dish)}
+            </div>
     )
   }
 }
