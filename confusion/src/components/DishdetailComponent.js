@@ -28,9 +28,14 @@ class DishDetail extends Component {
 
   render() {
     return (
+    <div>
             <div className="row">
                   {this.renderDish(this.props)}
             </div>
+                        <div className="row">
+
+            </div>
+          </div>
     )
   }
 }
