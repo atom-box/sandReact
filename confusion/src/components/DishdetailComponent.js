@@ -24,10 +24,28 @@ class DishDetail extends Component {
     }
   }
 
+  renderComments() {
+        if (this.props.dish.comments.length > 0 ) {
+      console.log(`there are comments`);
+      const listEls = this.props.dish.comments.map( (item) => {return <li>{item.comment}</li> }  )
+
+      return(
+
+<ul>
+{listEls}
+</ul>
+      )
+    } else {
+      console.log(`there are no comments`);
+      return(
+        <div></div>
+      )
+    }
+  }
 
   render() {
     if (this.props.dish != null){
-    const xxx = this.renderDish(), yyy =  "horse";
+    const xxx = this.renderDish(), yyy =  this.renderComments();
       const {name, comments, id} = this.props.dish;
       console.log(name);
       console.log(comments[1].comment);
