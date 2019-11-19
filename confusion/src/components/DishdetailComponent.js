@@ -8,7 +8,7 @@ class DishDetail extends Component {
         console.log(`dish was okay: [${dish.dish.name}]`);
 
           return(
-            <Card>
+            <Card className="col-12 col-md-5 m-1">
               <CardImg width="100%" src={dish.dish.image} alt={dish.dish.name} />
               <CardBody>
                 <CardTitle>{dish.dish.name}</CardTitle>
