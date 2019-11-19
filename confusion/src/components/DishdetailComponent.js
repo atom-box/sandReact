@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card, CardBody, CardTitle, CardText, CardImg } from 'reactstrap';
+import { Card, CardBody, CardTitle, CardText, CardImg , ListGroup, ListGroupItem} from 'reactstrap';
 
 class DishDetail extends Component {
 
@@ -27,13 +27,13 @@ class DishDetail extends Component {
   renderComments() {
         if (this.props.dish.comments.length > 0 ) {
       console.log(`there are comments`);
-      const listEls = this.props.dish.comments.map( (item) => {return <li>{item.comment}</li> }  )
+      const listEls = this.props.dish.comments.map( (item) => {return <ListGroupItem key={item.id}>{item.comment}<br />--{item.date}, {item.author}</ListGroupItem> }  )
 
       return(
 
-<ul>
+<ListGroup>
 {listEls}
-</ul>
+</ListGroup>
       )
     } else {
       console.log(`there are no comments`);
@@ -53,14 +53,14 @@ class DishDetail extends Component {
 
 
       return (
-      <div>
-        <div className="row">
+      <div className="row">
+        <div >
           {xxx}
         </div>
-        <div className="row">
+        <div className="col-12 col-md-5 m-1">
           <h4>Comments</h4>
           {yyy}
-        </div>
+        </div >
       </div>
       )
     } else { return <div></div>}

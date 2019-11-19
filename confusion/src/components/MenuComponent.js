@@ -20,9 +20,6 @@ handleClick(dish){
         return (
           <div key={dish.id} className="col-12 col-md-5 m-1">
             <Card onClick={() => this.handleClick(dish)}>
-
-
-
               <CardImg width="100%" src={dish.image} alt={dish.name} />
               <CardImgOverlay>
                 <CardTitle>{dish.name} </CardTitle>
