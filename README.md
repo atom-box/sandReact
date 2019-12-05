@@ -6,8 +6,8 @@ These two have React and Babel enabled by CDN. They will open in a browser if yo
 * [WorldPopulation.html](https://atom-box.github.io/sandReact/quickies/rWorldPopulation.html)
 ## Create-react-app
 This was made with Create--React-App.  
-* Here is the code 
-* Here is a screen capture
+* Here is [the code](https://github.com/atom-box/sandReact/tree/master/confusion/src/components) 
+* Here is a screen capture ![screencapture of vadonuts menu](https://github.com/atom-box/sandReact/blob/master/confusion/vadonuts-demo.gif)
 
 ## References:
 * Book: "The Road to React" by Robin Wieruch (great, thin)
