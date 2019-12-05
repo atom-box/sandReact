@@ -1,7 +1,7 @@
 ## What's going on here
 I'm making small React web apps.
 ## Click to run
-These aren't assignments or anything.  They were both made from scratch out of my imagination while I was trying out the syntax for React. Both have React and Babel that loads into your browser from a CDN. They will open if you click them:
+Exercise 1 and 2 were both made from scratch out of my imagination while I was trying out the syntax for React. Both have React and Babel that loads into your browser from a CDN. They will open if you click them:
 * Exercise 1 is [Spelling Owl](https://atom-box.github.io/sandReact/quickies/rDismissableListItems.html)
 * Exercise 2 is [WorldPopulation.html](https://atom-box.github.io/sandReact/quickies/rWorldPopulation.html)
 ## Create-react-app
